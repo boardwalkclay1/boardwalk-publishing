@@ -10,18 +10,19 @@
 
 /* ROOT COLORS */
 :root {
-    --black: #020202;
+    --black: #010101;
     --black-deep: #000;
-    --gold-dark: #8B6B2C;
-    --gold-rich: #D4AF37;
-    --gold-soft: rgba(212,175,55,0.18);
-    --gold-glow: rgba(212,175,55,0.45);
-    --text: #f5f5f5;
+    --gold-dark: #6f5522; /* darker, richer */
+    --gold-rich: #b9972f; /* deeper royal gold */
+    --gold-deep: #8B6B2C; /* ancient gold */
+    --gold-soft: rgba(185,151,47,0.22);
+    --gold-glow: rgba(185,151,47,0.55);
+    --text: #f2f2f2;
 }
 
 /* BODY */
 body {
-    background: radial-gradient(circle at top, #0a0a0a 0%, #000 60%, #000 100%);
+    background: radial-gradient(circle at top, #0a0a0a 0%, #000 70%, #000 100%);
     color: var(--text);
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
@@ -36,12 +37,12 @@ body::before {
     inset: 0;
     background-image:
         url('../images/gold-flakes.png'),
-        radial-gradient(circle, rgba(212,175,55,0.25) 0, transparent 60%),
-        radial-gradient(circle, rgba(212,175,55,0.12) 0, transparent 70%);
+        radial-gradient(circle, rgba(185,151,47,0.28) 0, transparent 60%),
+        radial-gradient(circle, rgba(185,151,47,0.14) 0, transparent 70%);
     background-size: 600px, 400px, 700px;
     background-repeat: repeat, no-repeat, no-repeat;
     background-position: center, 10% 0%, 80% 40%;
-    opacity: 0.35;
+    opacity: 0.38;
     pointer-events: none;
     z-index: -3;
 }
@@ -54,14 +55,14 @@ body::after {
     background-image: linear-gradient(
         135deg,
         transparent 0%,
-        rgba(212,175,55,0.08) 20%,
+        rgba(185,151,47,0.12) 20%,
         transparent 40%,
         transparent 60%,
-        rgba(212,175,55,0.06) 80%,
+        rgba(185,151,47,0.08) 80%,
         transparent 100%
     );
     mix-blend-mode: screen;
-    opacity: 0.4;
+    opacity: 0.45;
     pointer-events: none;
     z-index: -2;
 }
@@ -69,9 +70,9 @@ body::after {
 /* FEATHERS */
 .feather {
     position: fixed;
-    width: 55px;
-    opacity: 0.8;
-    filter: drop-shadow(0 0 12px var(--gold-glow));
+    width: 60px;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 14px var(--gold-glow));
     animation: feather-fall 22s linear infinite;
     z-index: -1;
 }
@@ -81,32 +82,32 @@ body::after {
     100% { transform: translateY(130vh) rotate(360deg); }
 }
 
-/* GOLD BARS (REALISTIC) */
+/* GOLD BARS (REALISTIC, DARKER) */
 .gold-bar {
     width: 100%;
-    height: 14px;
+    height: 16px;
     background: linear-gradient(90deg,
-        #3a2d12,
-        #8B6B2C,
-        #D4AF37,
-        #8B6B2C,
-        #3a2d12
+        #2a210d,
+        #6f5522,
+        #b9972f,
+        #6f5522,
+        #2a210d
     );
     border-radius: 6px;
     box-shadow:
-        0 0 12px rgba(212,175,55,0.4),
-        inset 0 0 6px rgba(0,0,0,0.6);
-    margin: 18px 0;
+        0 0 14px rgba(185,151,47,0.45),
+        inset 0 0 8px rgba(0,0,0,0.7);
+    margin: 22px 0;
 }
 
 /* GOLD DIAMOND */
 .gold-diamond {
-    width: 18px;
-    height: 18px;
-    background: linear-gradient(135deg, #D4AF37, #8B6B2C);
+    width: 22px;
+    height: 22px;
+    background: linear-gradient(135deg, #b9972f, #6f5522);
     transform: rotate(45deg);
     margin: 0 auto;
-    box-shadow: 0 0 10px var(--gold-glow);
+    box-shadow: 0 0 12px var(--gold-glow);
 }
 
 /* GOLD PEN WATERMARK */
@@ -114,9 +115,9 @@ body::after {
     position: absolute;
     right: 4%;
     bottom: 6%;
-    width: 120px;
-    opacity: 0.15;
-    filter: drop-shadow(0 0 8px var(--gold-glow));
+    width: 140px;
+    opacity: 0.18;
+    filter: drop-shadow(0 0 10px var(--gold-glow));
     pointer-events: none;
 }
 
@@ -125,37 +126,35 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 26px 0;
+    padding: 28px 0;
 }
 
-.brand-logo {
-    width: 52px;
-    height: 52px;
+/* REAL LOGO IMAGE */
+.brand-logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
     border-radius: 50%;
     border: 2px solid var(--gold-rich);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Great Vibes', cursive;
-    font-size: 2rem;
-    color: var(--gold-rich);
-    box-shadow: 0 0 12px var(--gold-glow);
+    box-shadow: 0 0 14px var(--gold-glow);
 }
 
+/* BRAND NAME */
 .brand-name {
-    font-family: 'Uncial Antiqua', serif;
-    font-size: 2.4rem;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.4rem;
     color: var(--gold-rich);
     letter-spacing: 0.05em;
+    text-shadow: 0 0 12px var(--gold-glow);
 }
 
 /* NAV */
 nav a {
     text-decoration: none;
     color: var(--text);
-    margin-left: 18px;
-    font-size: 0.95rem;
-    letter-spacing: 0.08em;
+    margin-left: 20px;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     border-bottom: 1px solid transparent;
     transition: 0.25s;
@@ -170,56 +169,60 @@ nav a.active {
 /* HERO */
 .hero-title {
     font-family: 'Great Vibes', cursive;
-    font-size: 5rem;
+    font-size: 6rem;
     color: var(--gold-rich);
-    text-shadow: 0 0 14px var(--gold-glow);
+    text-shadow: 0 0 18px var(--gold-glow);
 }
 
 .hero-sub {
-    font-size: 1.2rem;
-    opacity: 0.85;
-    max-width: 600px;
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 650px;
 }
 
 /* BUTTONS */
 .btn-gold {
     background: var(--gold-rich);
     color: #000;
-    padding: 12px 28px;
+    padding: 14px 32px;
     border-radius: 999px;
     border: 1px solid var(--gold-dark);
     font-weight: 600;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     text-decoration: none;
     transition: 0.25s;
+    box-shadow: 0 0 12px var(--gold-glow);
 }
 
 .btn-gold:hover {
-    background: #f3dca0;
+    background: #d8b85a;
 }
 
 /* CARDS */
 .card,
 .book-card {
     border: 1px solid var(--gold-soft);
-    border-radius: 14px;
-    padding: 20px;
-    background: rgba(20,20,20,0.6);
-    backdrop-filter: blur(6px);
-    box-shadow: inset 0 0 12px rgba(212,175,55,0.12);
+    border-radius: 16px;
+    padding: 24px;
+    background: rgba(15,15,15,0.7);
+    backdrop-filter: blur(8px);
+    box-shadow: inset 0 0 14px rgba(185,151,47,0.16);
 }
 
+/* CARD TITLES */
 .card-title,
 .book-title {
     color: var(--gold-rich);
     font-family: 'Uncial Antiqua', serif;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    text-shadow: 0 0 10px var(--gold-glow);
 }
 
 /* FOOTER */
 footer {
     border-top: 1px solid var(--gold-soft);
-    padding: 20px;
+    padding: 24px;
     text-align: center;
-    opacity: 0.75;
+    opacity: 0.8;
+    font-size: 0.9rem;
 }
