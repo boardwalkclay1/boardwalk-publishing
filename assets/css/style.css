@@ -5,21 +5,18 @@
     box-sizing: border-box;
 }
 
-/* FONTS — Great Vibes MUST load first */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
+/* CORRECT FONT IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-/* GLOBAL CURSIVE OVERRIDES — FIXES DESKTOP */
-.cursive,
-.cursive-small,
-h1, h2, h3, h4, h5, h6,
-.brand-name,
-.brand-tagline,
-nav a,
-.hero-title,
-.hero-sub,
-.card-title,
-footer {
+/* GLOBAL TYPOGRAPHY FIX */
+.cursive {
     font-family: 'Great Vibes', cursive !important;
+}
+
+.cursive-small {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 1.4rem;
 }
 
 /* ROOT COLORS */
@@ -42,96 +39,83 @@ body {
     position: relative;
 }
 
-/* GOLD FLAKES */
+/* GOLD FLAKES — PURE CSS */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background-image:
-        url('../images/gold-flakes.png'),
-        radial-gradient(circle, rgba(185,151,47,0.28) 0, transparent 60%),
-        radial-gradient(circle, rgba(185,151,47,0.14) 0, transparent 70%);
-    background-size: 600px, 400px, 700px;
-    background-repeat: repeat, no-repeat, no-repeat;
-    background-position: center, 10% 0%, 80% 40%;
-    opacity: 0.38;
     pointer-events: none;
     z-index: -3;
-}
 
-/* GOLD DUST */
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: linear-gradient(
-        135deg,
-        transparent 0%,
-        rgba(185,151,47,0.12) 20%,
-        transparent 40%,
-        transparent 60%,
-        rgba(185,151,47,0.08) 80%,
-        transparent 100%
-    );
-    mix-blend-mode: screen;
+    background-image:
+        radial-gradient(circle, rgba(185,151,47,0.35) 0%, transparent 60%),
+        radial-gradient(circle, rgba(185,151,47,0.22) 0%, transparent 70%),
+        radial-gradient(circle, rgba(185,151,47,0.18) 0%, transparent 75%),
+        radial-gradient(circle, rgba(185,151,47,0.12) 0%, transparent 80%);
+
+    background-size: 
+        180px 180px,
+        260px 260px,
+        340px 340px,
+        420px 420px;
+
+    background-position:
+        10% 20%,
+        70% 10%,
+        40% 60%,
+        85% 75%;
+
+    animation: goldFlakesMove 22s linear infinite;
     opacity: 0.45;
-    pointer-events: none;
-    z-index: -2;
 }
 
-/* FEATHERS */
+@keyframes goldFlakesMove {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(60px); }
+}
+
+/* FEATHERS — PURE CSS */
 .feather {
     position: fixed;
-    width: 60px;
-    opacity: 0.85;
-    filter: drop-shadow(0 0 14px var(--gold-glow));
-    animation: feather-fall 22s linear infinite;
-    z-index: -1;
-}
-
-@keyframes feather-fall {
-    0% { transform: translateY(-20vh) rotate(0deg); }
-    100% { transform: translateY(130vh) rotate(360deg); }
-}
-
-/* GOLD BAR */
-.gold-bar {
-    width: 100%;
-    height: 16px;
-    background: linear-gradient(90deg,
-        #2a210d,
-        #6f5522,
-        #b9972f,
-        #6f5522,
-        #2a210d
-    );
-    border-radius: 6px;
-    box-shadow:
-        0 0 14px rgba(185,151,47,0.45),
-        inset 0 0 8px rgba(0,0,0,0.7);
-    margin: 22px 0;
-}
-
-/* GOLD DIAMOND */
-.gold-diamond {
-    width: 22px;
-    height: 22px;
-    background: linear-gradient(135deg, #b9972f, #6f5522);
-    transform: rotate(45deg);
-    margin: 0 auto;
-    box-shadow: 0 0 12px var(--gold-glow);
-}
-
-/* GOLD PEN WATERMARK */
-.pen-watermark {
-    position: absolute;
-    right: 4%;
-    bottom: 6%;
-    width: 140px;
-    opacity: 0.18;
-    filter: drop-shadow(0 0 10px var(--gold-glow));
+    width: 55px;
+    height: 55px;
     pointer-events: none;
+    z-index: -1;
+
+    background-image: radial-gradient(
+        ellipse at center,
+        rgba(185,151,47,0.85) 0%,
+        rgba(185,151,47,0.45) 40%,
+        rgba(185,151,47,0.15) 70%,
+        transparent 100%
+    );
+
+    border-radius: 60% 40% 60% 40%;
+    filter: blur(1px) drop-shadow(0 0 12px rgba(185,151,47,0.55));
+
+    animation: featherFall 18s linear infinite;
 }
+
+@keyframes featherFall {
+    0% {
+        transform: translateY(-20vh) translateX(0) rotate(0deg);
+        opacity: 0.9;
+    }
+    50% {
+        transform: translateY(50vh) translateX(20px) rotate(180deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(120vh) translateX(-20px) rotate(360deg);
+        opacity: 0.4;
+    }
+}
+
+.feather:nth-child(1) { left: 10%; animation-delay: 0s; }
+.feather:nth-child(2) { left: 30%; animation-delay: 4s; }
+.feather:nth-child(3) { left: 55%; animation-delay: 2s; }
+.feather:nth-child(4) { left: 75%; animation-delay: 6s; }
+.feather:nth-child(5) { left: 90%; animation-delay: 1s; }
 
 /* HEADER */
 header {
@@ -141,7 +125,7 @@ header {
     padding: 28px 0;
 }
 
-/* REAL LOGO — NO CIRCLE */
+/* LOGO */
 .brand-logo-img {
     width: 90px;
     height: 90px;
@@ -153,19 +137,24 @@ header {
 
 /* BRAND TEXT */
 .brand-name {
+    font-family: 'Great Vibes', cursive;
     font-size: 4rem;
     color: var(--gold-rich);
     text-shadow: 0 0 14px var(--gold-glow);
+    line-height: 1.1;
 }
 
 .brand-tagline {
+    font-family: 'Great Vibes', cursive;
     font-size: 1.4rem;
     color: var(--gold-rich);
     opacity: 0.9;
+    line-height: 1.2;
 }
 
 /* NAV */
 nav a {
+    font-family: 'Great Vibes', cursive;
     text-decoration: none;
     color: var(--text);
     margin-left: 20px;
@@ -183,15 +172,19 @@ nav a.active {
 
 /* HERO */
 .hero-title {
+    font-family: 'Great Vibes', cursive;
     font-size: 6rem;
     color: var(--gold-rich);
     text-shadow: 0 0 18px var(--gold-glow);
+    line-height: 1.1;
 }
 
 .hero-sub {
+    font-family: 'Great Vibes', cursive;
     font-size: 1.8rem;
     opacity: 0.9;
     max-width: 650px;
+    line-height: 1.3;
 }
 
 /* BUTTONS */
@@ -226,13 +219,16 @@ nav a.active {
 /* CARD TITLES */
 .card-title,
 .book-title {
+    font-family: 'Great Vibes', cursive;
     color: var(--gold-rich);
     font-size: 2rem;
     text-shadow: 0 0 10px var(--gold-glow);
+    line-height: 1.2;
 }
 
 /* FOOTER */
 footer {
+    font-family: 'Great Vibes', cursive;
     border-top: 1px solid var(--gold-soft);
     padding: 24px;
     text-align: center;
