@@ -3,86 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <title>Boardwalk Publishing • Contact</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .cursive { font-family: 'Great Vibes', cursive !important; }
+        .gold-bg {
+            background: rgba(0,0,0,0.55);
+            padding: 8px 14px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        .nav-btn {
+            background: rgba(0,0,0,0.55);
+            padding: 10px 18px;
+            border-radius: 999px;
+            color: var(--gold-rich);
+            text-decoration: none;
+            margin-left: 12px;
+            border: 1px solid var(--gold-soft);
+            transition: 0.25s;
+            font-family: 'Great Vibes', cursive;
+        }
+        .nav-btn:hover,
+        .nav-btn.active {
+            background: var(--gold-rich);
+            color: #000;
+            border-color: var(--gold-rich);
+        }
+        .brand { display:flex; align-items:center; gap:20px; }
+        form {
+            max-width: 520px;
+            margin-top: 20px;
+        }
+        label {
+            display:block;
+            margin-bottom:6px;
+            font-size: 0.95rem;
+        }
+        input, textarea {
+            width:100%;
+            padding:10px 12px;
+            margin-bottom:14px;
+            border-radius:8px;
+            border:1px solid var(--gold-soft);
+            background: rgba(0,0,0,0.7);
+            color: var(--text);
+        }
+        textarea { min-height: 140px; resize: vertical; }
+        .btn-submit {
+            background: var(--gold-rich);
+            color:#000;
+            padding:10px 24px;
+            border-radius:999px;
+            border:1px solid var(--gold-deep);
+            cursor:pointer;
+            font-weight:600;
+            letter-spacing:0.08em;
+        }
+        .btn-submit:hover { background:#d8b85a; }
+    </style>
 </head>
 <body>
 
-<img src="assets/images/feather-gold.png" alt="" class="feather feather-left">
-<img src="assets/images/feather-gold.png" alt="" class="feather feather-right">
+<div class="feather"></div><div class="feather"></div><div class="feather"></div><div class="feather"></div><div class="feather"></div>
 
 <div class="wrapper">
 
     <header>
         <div class="brand">
-            <div class="brand-logo">B</div>
+            <img src="assets/img/publish-logo.JPG" alt="Boardwalk Publishing Logo" class="brand-logo-img">
             <div class="brand-text">
-                <div class="brand-name">Boardwalk Publishing</div>
-                <div class="brand-tagline">Subtle • Classy • Intentional</div>
+                <div class="brand-name cursive gold-bg">Boardwalk Publishing</div>
             </div>
         </div>
 
         <nav>
-            <a href="index.html">Home</a>
-            <a href="books.html">Books &amp; Comics</a>
-            <a href="about.html">About</a>
-            <a href="contact.html" class="active">Contact</a>
+            <a href="index.html" class="nav-btn cursive">Home</a>
+            <a href="books.html" class="nav-btn cursive">Books</a>
+            <a href="about.html" class="nav-btn cursive">About</a>
+            <a href="contact.html" class="nav-btn active cursive">Contact</a>
         </nav>
     </header>
 
     <main>
+        <section class="hero">
+            <h1 class="hero-title cursive gold-bg">Contact Us</h1>
+            <p class="hero-sub cursive gold-bg" style="max-width: 720px;">
+                Use this form to start a publishing conversation, ask a question, or talk about a project.
+            </p>
+        </section>
+
+        <div class="gold-bar"></div>
+        <div class="gold-diamond"></div>
+
         <section class="section">
-            <div class="section-header">
-                <div class="section-label">Connect</div>
-                <h2 class="section-title">Work With Boardwalk</h2>
-            </div>
+            <h2 class="section-title cursive gold-bg">Send a Message</h2>
 
-            <div class="contact-grid">
-                <form class="contact-form">
-                    <label for="name">Name</label>
-                    <input id="name" type="text" placeholder="Your name">
+            <form>
+                <label class="cursive">Name</label>
+                <input type="text" name="name" placeholder="Your name">
 
-                    <label for="email">Email</label>
-                    <input id="email" type="email" placeholder="you@example.com">
+                <label class="cursive">Email</label>
+                <input type="email" name="email" placeholder="you@example.com">
 
-                    <label for="type">What are you reaching out about?</label>
-                    <select id="type">
-                        <option>Book publishing</option>
-                        <option>Comic creation</option>
-                        <option>Ghostwriting</option>
-                        <option>Display my book on the site</option>
-                        <option>Other</option>
-                    </select>
+                <label class="cursive">What are you reaching out about?</label>
+                <input type="text" name="subject" placeholder="Publishing, comics, ghostwriting, etc.">
 
-                    <label for="message">Tell us about your project</label>
-                    <textarea id="message" placeholder="Share where you are, what you have, and what you want this to become."></textarea>
+                <label class="cursive">Message</label>
+                <textarea name="message" placeholder="Tell us about your story or question."></textarea>
 
-                    <!-- You can wire this to a backend or form service later -->
-                    <button type="submit" class="btn-gold" style="margin-top:6px;">Send Message</button>
-                </form>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </section>
 
-                <div class="about-highlight">
-                    <p class="contact-note">
-                        You can also reach out directly:
-                    </p>
-                    <p class="contact-note" style="margin-top:8px;">
-                        Email: <strong>boardwalkclay1@gmail.com</strong>
-                    </p>
-                    <p class="contact-note" style="margin-top:12px;">
-                        For paywalls, we typically use PayPal links connected to your project.
-                        Once we agree on scope and pricing, you’ll receive a direct payment link
-                        and a clear breakdown of what’s included.
-                    </p>
-                    <p class="contact-note" style="margin-top:12px;">
-                        If you want your book or comic displayed on the site, mention:
-                        <br>• Title<br>• Format (book/comic)<br>• Short description<br>• Whether you already have a cover and files ready.
-                    </p>
-                </div>
-            </div>
+        <div class="gold-bar"></div>
+
+        <section class="section">
+            <h2 class="section-title cursive gold-bg">Direct Contact</h2>
+            <p class="cursive gold-bg" style="max-width: 720px;">
+                You can also reach us directly at:  
+                <br>boardwalkclay1@gmail.com
+            </p>
         </section>
     </main>
 
-    <footer>
-        © Boardwalk Publishing • Contact
+    <footer class="cursive gold-bg">
+        © Boardwalk Publishing • All Rights Reserved
     </footer>
 
 </div>
