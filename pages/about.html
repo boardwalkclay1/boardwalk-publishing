@@ -3,78 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <title>Boardwalk Publishing • About</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .cursive { font-family: 'Great Vibes', cursive !important; }
+        .gold-bg {
+            background: rgba(0,0,0,0.55);
+            padding: 8px 14px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        .nav-btn {
+            background: rgba(0,0,0,0.55);
+            padding: 10px 18px;
+            border-radius: 999px;
+            color: var(--gold-rich);
+            text-decoration: none;
+            margin-left: 12px;
+            border: 1px solid var(--gold-soft);
+            transition: 0.25s;
+            font-family: 'Great Vibes', cursive;
+        }
+        .nav-btn:hover,
+        .nav-btn.active {
+            background: var(--gold-rich);
+            color: #000;
+            border-color: var(--gold-rich);
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
 </head>
 <body>
 
-<img src="assets/images/feather-gold.png" alt="" class="feather feather-left">
-<img src="assets/images/feather-gold.png" alt="" class="feather feather-right">
+<div class="feather"></div><div class="feather"></div><div class="feather"></div><div class="feather"></div><div class="feather"></div>
 
 <div class="wrapper">
 
     <header>
         <div class="brand">
-            <div class="brand-logo">B</div>
+            <img src="assets/img/publish-logo.JPG" alt="Boardwalk Publishing Logo" class="brand-logo-img">
             <div class="brand-text">
-                <div class="brand-name">Boardwalk Publishing</div>
-                <div class="brand-tagline">A Private Black &amp; Gold Imprint</div>
+                <div class="brand-name cursive gold-bg">Boardwalk Publishing</div>
             </div>
         </div>
 
         <nav>
-            <a href="index.html">Home</a>
-            <a href="books.html">Books &amp; Comics</a>
-            <a href="about.html" class="active">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" class="nav-btn cursive">Home</a>
+            <a href="books.html" class="nav-btn cursive">Books</a>
+            <a href="about.html" class="nav-btn active cursive">About</a>
+            <a href="contact.html" class="nav-btn cursive">Contact</a>
         </nav>
     </header>
 
     <main>
+        <section class="hero">
+            <h1 class="hero-title cursive gold-bg">About Boardwalk Publishing</h1>
+            <p class="hero-sub cursive gold-bg" style="max-width: 720px;">
+                A private, cinematic publishing studio built for creators who want their work treated like art,
+                not content.
+            </p>
+        </section>
+
+        <div class="gold-bar"></div>
+        <div class="gold-diamond"></div>
+
         <section class="section">
-            <div class="section-header">
-                <div class="section-label">Story</div>
-                <h2 class="section-title">What Boardwalk Publishing Is</h2>
-            </div>
+            <h2 class="section-title cursive gold-bg">Our Vision</h2>
+            <p class="cursive gold-bg" style="max-width: 720px;">
+                Boardwalk Publishing exists for storytellers who care about feeling, atmosphere, and presentation.
+                We focus on intimate, character‑driven books and comics that feel like experiences, not just files.
+            </p>
+        </section>
 
-            <div class="about-layout">
-                <div class="about-text">
-                    <p>
-                        Boardwalk Publishing is a private, black-and-gold publishing house built for
-                        creators who want more than a generic upload button. It’s a place where comics,
-                        novels, and personal stories are treated like cinematic experiences.
-                    </p>
-                    <p>
-                        The imprint was created to give authors and comic makers a space that feels
-                        intentional—soft cursive, falling feathers, gold dust, and quiet confidence.
-                        Every project is handled like a one-of-one piece.
-                    </p>
-                    <p>
-                        From full comic production to ghostwriting and book display, Boardwalk
-                        Publishing is designed to be both a home for your own work and a platform
-                        for other voices you choose to bring in.
-                    </p>
-                </div>
+        <div class="gold-bar"></div>
 
-                <aside class="about-highlight">
-                    <p>
-                        We work with:
-                    </p>
-                    <ul style="margin-top:8px; padding-left:18px;">
-                        <li>Authors with finished or in-progress manuscripts</li>
-                        <li>People who want their life turned into a comic or book</li>
-                        <li>Creators who want a private, curated place to sell their work</li>
-                    </ul>
-                    <p style="margin-top:12px;">
-                        Services include editing, formatting, comic scripting, visual planning,
-                        ghostwriting, and premium display slots on the site.
-                    </p>
-                </aside>
-            </div>
+        <section class="section">
+            <h2 class="section-title cursive gold-bg">How We Work</h2>
+            <p class="cursive gold-bg" style="max-width: 720px;">
+                We work closely with each creator, moving from idea to finished release in clear, intentional steps:
+                development, editing, design, layout, and launch. No conveyor belts. No rushed output. Just focused,
+                cinematic builds.
+            </p>
+        </section>
+
+        <div class="gold-bar"></div>
+
+        <section class="section">
+            <h2 class="section-title cursive gold-bg">Who We’re For</h2>
+            <p class="cursive gold-bg" style="max-width: 720px;">
+                We’re for authors, comic creators, and people with real stories to tell — especially those who want
+                a premium home for their work instead of a generic upload button.
+            </p>
+        </section>
+
+        <div class="gold-bar"></div>
+
+        <section class="section" style="text-align:center;">
+            <h2 class="section-title cursive gold-bg">Ready to Build Something?</h2>
+            <p class="cursive gold-bg" style="max-width: 700px; margin: 0 auto 20px;">
+                If you’re serious about your story and want it handled with care, we’d love to talk.
+            </p>
+            <a href="contact.html" class="btn-gold">Contact Us</a>
         </section>
     </main>
 
-    <footer>
-        © Boardwalk Publishing • About the Imprint
+    <footer class="cursive gold-bg">
+        © Boardwalk Publishing • All Rights Reserved
     </footer>
 
 </div>
