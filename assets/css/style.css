@@ -5,8 +5,22 @@
     box-sizing: border-box;
 }
 
-/* FONTS */
+/* FONTS — Great Vibes MUST load first */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* GLOBAL CURSIVE OVERRIDES — FIXES DESKTOP */
+.cursive,
+.cursive-small,
+h1, h2, h3, h4, h5, h6,
+.brand-name,
+.brand-tagline,
+nav a,
+.hero-title,
+.hero-sub,
+.card-title,
+footer {
+    font-family: 'Great Vibes', cursive !important;
+}
 
 /* ROOT COLORS */
 :root {
@@ -139,14 +153,12 @@ header {
 
 /* BRAND TEXT */
 .brand-name {
-    font-family: 'Great Vibes', cursive;
     font-size: 4rem;
     color: var(--gold-rich);
     text-shadow: 0 0 14px var(--gold-glow);
 }
 
 .brand-tagline {
-    font-family: 'Great Vibes', cursive;
     font-size: 1.4rem;
     color: var(--gold-rich);
     opacity: 0.9;
@@ -157,8 +169,7 @@ nav a {
     text-decoration: none;
     color: var(--text);
     margin-left: 20px;
-    font-size: 1.2rem;
-    font-family: 'Great Vibes', cursive;
+    font-size: 1.4rem;
     letter-spacing: 0.05em;
     border-bottom: 1px solid transparent;
     transition: 0.25s;
@@ -172,14 +183,12 @@ nav a.active {
 
 /* HERO */
 .hero-title {
-    font-family: 'Great Vibes', cursive;
     font-size: 6rem;
     color: var(--gold-rich);
     text-shadow: 0 0 18px var(--gold-glow);
 }
 
 .hero-sub {
-    font-family: 'Great Vibes', cursive;
     font-size: 1.8rem;
     opacity: 0.9;
     max-width: 650px;
@@ -214,11 +223,10 @@ nav a.active {
     box-shadow: inset 0 0 14px rgba(185,151,47,0.16);
 }
 
-/* CARD TITLES — NOW CURSIVE */
+/* CARD TITLES */
 .card-title,
 .book-title {
     color: var(--gold-rich);
-    font-family: 'Great Vibes', cursive;
     font-size: 2rem;
     text-shadow: 0 0 10px var(--gold-glow);
 }
@@ -229,6 +237,5 @@ footer {
     padding: 24px;
     text-align: center;
     opacity: 0.8;
-    font-family: 'Great Vibes', cursive;
     font-size: 1.4rem;
 }
