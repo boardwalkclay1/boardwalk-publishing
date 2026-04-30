@@ -12,9 +12,10 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- INLINE FONT + BLACK BACKING FIX -->
+    <!-- INLINE FONT + BLACK BACKING + BUTTON FIX -->
     <style>
         .cursive { font-family: 'Great Vibes', cursive !important; }
+
         .gold-bg {
             background: rgba(0,0,0,0.55);
             padding: 8px 14px;
@@ -27,6 +28,7 @@
             border-radius: 10px;
             display: inline-block;
         }
+
         .nav-btn {
             background: rgba(0,0,0,0.55);
             padding: 10px 18px;
@@ -44,10 +46,94 @@
             color: #000;
             border-color: var(--gold-rich);
         }
+
         .brand {
             display: flex;
             align-items: center;
             gap: 20px;
+        }
+
+        /* HERO LAYOUT + BUTTONS NOT BEHIND ANYTHING */
+        .hero {
+            padding-top: 20px;
+        }
+        .hero-actions {
+            margin-top: 26px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        /* BUBBLE OUTLINE BUTTONS (NO PLAIN LINKS) */
+        .btn-outline {
+            display: inline-block;
+            padding: 12px 26px;
+            border-radius: 999px;
+            border: 1px solid var(--gold-soft);
+            color: var(--gold-rich);
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            background: rgba(0,0,0,0.55);
+            transition: 0.25s;
+        }
+        .btn-outline:hover {
+            background: var(--gold-rich);
+            color: #000;
+            border-color: var(--gold-rich);
+        }
+
+        /* SECTION LAYOUT UPGRADE */
+        .section {
+            margin-top: 40px;
+        }
+
+        .section-row {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+            gap: 28px;
+            align-items: flex-start;
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+        .pill {
+            border-radius: 999px;
+            border: 1px solid var(--gold-soft);
+            padding: 6px 14px;
+            font-size: 0.9rem;
+            background: rgba(0,0,0,0.55);
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 18px;
+            justify-content: center;
+        }
+        .quick-link-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 999px;
+            border: 1px solid var(--gold-soft);
+            background: rgba(0,0,0,0.55);
+            color: var(--gold-rich);
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: 0.25s;
+        }
+        .quick-link-btn:hover {
+            background: var(--gold-rich);
+            color: #000;
+            border-color: var(--gold-rich);
         }
     </style>
 </head>
@@ -90,7 +176,7 @@
             </p>
 
             <div class="hero-actions">
-                <a href="contact.html" class="btn-gold">Publish With Us</a>
+                <a href="publish.html" class="btn-gold">Publish With Us</a>
                 <a href="books.html" class="btn-outline">Our Catalog</a>
             </div>
         </section>
@@ -100,13 +186,26 @@
 
         <!-- WHAT BOARDWALK PUBLISHING IS -->
         <section class="section">
-            <h2 class="section-title cursive gold-bg">What We Are</h2>
-
-            <p class="cursive gold-bg" style="max-width: 720px;">
-                Boardwalk Publishing is a private, cinematic publishing house built for authors, comic creators,
-                and storytellers who want their work treated like art. We specialize in premium presentation,
-                emotional storytelling, and polished digital releases.
-            </p>
+            <div class="section-row">
+                <div>
+                    <h2 class="section-title cursive gold-bg">What We Are</h2>
+                    <p class="cursive gold-bg" style="max-width: 720px; margin-top: 12px;">
+                        Boardwalk Publishing is a private, cinematic publishing house built for authors, comic creators,
+                        and storytellers who want their work treated like art. We specialize in premium presentation,
+                        emotional storytelling, and polished digital releases.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="card-title cursive gold-bg">Built For</h3>
+                    <div class="pill-row">
+                        <span class="pill cursive">Novels</span>
+                        <span class="pill cursive">Comics</span>
+                        <span class="pill cursive">Memoirs</span>
+                        <span class="pill cursive">Graphic Stories</span>
+                        <span class="pill cursive">Personal Worlds</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <div class="gold-bar"></div>
@@ -115,44 +214,68 @@
         <section class="section">
             <h2 class="section-title cursive gold-bg">What We Do</h2>
 
-            <div class="grid">
+            <div class="grid" style="margin-top: 18px;">
                 <article class="card">
                     <h3 class="card-title cursive gold-bg">Book Publishing</h3>
                     <p>We take your manuscript and turn it into a polished, premium digital book.</p>
-                    <a href="contact.html" class="btn-outline">Start Publishing</a>
+                    <a href="services.html" class="btn-outline">Book Services</a>
                 </article>
 
                 <article class="card">
                     <h3 class="card-title cursive gold-bg">Comic Production</h3>
                     <p>We help creators turn stories into cinematic comics with full art direction.</p>
-                    <a href="contact.html" class="btn-outline">Create a Comic</a>
+                    <a href="services.html" class="btn-outline">Comic Services</a>
                 </article>
 
                 <article class="card">
                     <h3 class="card-title cursive gold-bg">Story Development</h3>
                     <p>We help shape your ideas into structured, compelling stories ready for release.</p>
-                    <a href="contact.html" class="btn-outline">Develop Your Story</a>
+                    <a href="services.html" class="btn-outline">Development</a>
                 </article>
 
                 <article class="card">
                     <h3 class="card-title cursive gold-bg">Author Services</h3>
                     <p>Branding, display pages, catalog placement, and premium presentation for your work.</p>
-                    <a href="contact.html" class="btn-outline">Author Services</a>
+                    <a href="services.html" class="btn-outline">Author Services</a>
                 </article>
             </div>
         </section>
 
         <div class="gold-bar"></div>
 
-        <!-- WHY BOARDWALK -->
+        <!-- HOW IT WORKS PREVIEW -->
         <section class="section">
-            <h2 class="section-title cursive gold-bg">Why Choose Us</h2>
-
-            <p class="cursive gold-bg" style="max-width: 720px;">
-                We don’t mass‑produce. We craft.  
-                Every book, every comic, every story gets personal attention, premium visuals,
-                and a cinematic presentation that stands out from generic publishing platforms.
+            <h2 class="section-title cursive gold-bg">How It Works</h2>
+            <p class="cursive gold-bg" style="max-width: 720px; margin-top: 12px;">
+                Simple, clear path from idea to release:
             </p>
+            <div class="pill-row">
+                <span class="pill cursive">Submit</span>
+                <span class="pill cursive">Develop</span>
+                <span class="pill cursive">Design & Build</span>
+                <span class="pill cursive">Release & Display</span>
+            </div>
+            <div style="margin-top: 18px;">
+                <a href="how-it-works.html" class="btn-outline">See Full Process</a>
+            </div>
+        </section>
+
+        <div class="gold-bar"></div>
+
+        <!-- QUICK NAV TO CORE PAGES -->
+        <section class="section" style="text-align: center;">
+            <h2 class="section-title cursive gold-bg">Explore Boardwalk</h2>
+            <p class="cursive gold-bg" style="max-width: 700px; margin: 0 auto 18px;">
+                Learn who we are, what we offer, and how to get your story into our world.
+            </p>
+
+            <div class="quick-links">
+                <a href="about.html" class="quick-link-btn cursive">About</a>
+                <a href="services.html" class="quick-link-btn cursive">Services</a>
+                <a href="publish.html" class="quick-link-btn cursive">Publish With Us</a>
+                <a href="pricing.html" class="quick-link-btn cursive">Pricing</a>
+                <a href="faq.html" class="quick-link-btn cursive">FAQ</a>
+            </div>
         </section>
 
         <div class="gold-bar"></div>
@@ -164,7 +287,7 @@
                 Whether you're writing your first book or building a comic universe — Boardwalk Publishing
                 helps bring your vision to life.
             </p>
-            <a href="contact.html" class="btn-gold">Start Your Journey</a>
+            <a href="publish.html" class="btn-gold">Start Your Project</a>
         </section>
 
     </main>
