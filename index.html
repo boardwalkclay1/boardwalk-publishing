@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Boardwalk Publishing • Home</title>
 
-    <!-- FORCE LOAD CURSIVE FONT DIRECTLY (DESKTOP-PROOF) -->
+    <!-- FORCE LOAD CURSIVE FONT DIRECTLY -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
@@ -29,12 +29,33 @@
             border-radius: 10px;
             display: inline-block;
         }
+        .nav-btn {
+            background: rgba(0,0,0,0.55);
+            padding: 10px 18px;
+            border-radius: 999px;
+            color: var(--gold-rich);
+            text-decoration: none;
+            margin-left: 12px;
+            border: 1px solid var(--gold-soft);
+            transition: 0.25s;
+        }
+        .nav-btn:hover,
+        .nav-btn.active {
+            background: var(--gold-rich);
+            color: #000;
+            border-color: var(--gold-rich);
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
     </style>
 </head>
 
 <body>
 
-<!-- FEATHERS (these will be replaced by CSS-generated ones later) -->
+<!-- FEATHERS -->
 <div class="feather"></div>
 <div class="feather"></div>
 <div class="feather"></div>
@@ -47,20 +68,21 @@
     <header>
         <div class="brand">
 
-            <!-- REAL LOGO -->
+            <!-- LOGO -->
             <img src="assets/img/publish-logo.JPG" alt="Boardwalk Publishing Logo" class="brand-logo-img">
 
+            <!-- TITLE NEXT TO LOGO -->
             <div class="brand-text">
                 <div class="brand-name cursive gold-bg">Boardwalk Publishing</div>
-                <div class="brand-tagline cursive gold-bg">Private Black & Gold Imprint • Cinematic • Personal • Exclusive</div>
             </div>
         </div>
 
+        <!-- NAVIGATION (BUBBLE BUTTONS ONLY) -->
         <nav>
-            <a href="index.html" class="active cursive gold-bg">Home</a>
-            <a href="books.html" class="cursive gold-bg">Books & Comics</a>
-            <a href="about.html" class="cursive gold-bg">About</a>
-            <a href="contact.html" class="cursive gold-bg">Contact</a>
+            <a href="index.html" class="nav-btn active cursive">Home</a>
+            <a href="books.html" class="nav-btn cursive">Books & Comics</a>
+            <a href="about.html" class="nav-btn cursive">About</a>
+            <a href="contact.html" class="nav-btn cursive">Contact</a>
         </nav>
     </header>
 
@@ -70,8 +92,7 @@
             <h1 class="hero-title cursive gold-bg-wide">Where Stories Become Legacy.</h1>
 
             <p class="hero-sub cursive gold-bg" style="max-width: 720px;">
-                A private black‑and‑gold publishing house for novels, comics, memoirs, and personal stories
-                transformed into visual worlds. Built for creators who want their work treated like art.
+                A private publishing studio for books, comics, and personal stories turned into visual worlds.
             </p>
 
             <div class="hero-actions">
@@ -83,64 +104,44 @@
         <div class="gold-bar"></div>
         <div class="gold-diamond"></div>
 
-        <!-- ABOUT BOARDWALK -->
+        <!-- ABOUT -->
         <section class="section">
-            <h2 class="section-title cursive gold-bg">What Boardwalk Publishing Is</h2>
-
-            <p class="cursive gold-bg" style="max-width: 720px; margin-bottom: 20px;">
-                Boardwalk Publishing is a private, cinematic imprint dedicated to creators who want more than
-                a generic upload button. We craft books, comics, and personal stories with intention, emotion,
-                and visual identity. Every project is treated like a one‑of‑one piece — soft, gold‑lit, and
-                built to last.
-            </p>
+            <h2 class="section-title cursive gold-bg">About Us</h2>
 
             <p class="cursive gold-bg" style="max-width: 720px;">
-                Whether you're writing your first novel, turning your life into a comic, or looking for a
-                premium home to display and sell your work, Boardwalk Publishing gives you a place where your
-                story is honored, elevated, and beautifully presented.
+                We help creators turn their stories into polished books and cinematic comics with care,
+                clarity, and a premium presentation.
             </p>
         </section>
 
         <div class="gold-bar"></div>
 
-        <!-- WHAT WE DO -->
+        <!-- WHAT WE OFFER -->
         <section class="section">
             <h2 class="section-title cursive gold-bg">What We Offer</h2>
 
             <div class="grid">
                 <article class="card">
                     <h3 class="card-title cursive gold-bg">Book Publishing</h3>
-                    <p>
-                        Editing, formatting, cover design, layout, and full digital release. Your book becomes
-                        a polished, cinematic experience.
-                    </p>
+                    <p>Editing, formatting, cover design, and full digital release.</p>
                     <a href="contact.html" class="btn-outline">Start Publishing</a>
                 </article>
 
                 <article class="card">
                     <h3 class="card-title cursive gold-bg">Comic Creation</h3>
-                    <p>
-                        Scriptwriting, panel planning, art direction, coloring, lettering — we turn your ideas
-                        or life story into a full comic.
-                    </p>
+                    <p>Scriptwriting, panel planning, art direction, coloring, lettering.</p>
                     <a href="contact.html" class="btn-outline">Create a Comic</a>
                 </article>
 
                 <article class="card">
                     <h3 class="card-title cursive gold-bg">Ghostwriting</h3>
-                    <p>
-                        Books, memoirs, comics — we write your story for you in your voice, your tone, your
-                        truth.
-                    </p>
+                    <p>Your story written in your voice, your tone, your truth.</p>
                     <a href="contact.html" class="btn-outline">Tell Your Story</a>
                 </article>
 
                 <article class="card">
                     <h3 class="card-title cursive gold-bg">Display Your Book</h3>
-                    <p>
-                        Premium black‑and‑gold display slots for authors who want their book showcased on our
-                        site with direct paywall links.
-                    </p>
+                    <p>Premium black‑and‑gold display slots with direct paywall links.</p>
                     <a href="contact.html" class="btn-outline">Get Displayed</a>
                 </article>
             </div>
@@ -156,28 +157,28 @@
                 <article class="card">
                     <div class="card-tag cursive gold-bg">Comic • Volume 1</div>
                     <h3 class="card-title cursive gold-bg">Gold Lake</h3>
-                    <p>A cinematic, character‑driven comic set around a mysterious lake where choices echo across timelines.</p>
+                    <p>A cinematic comic set around a mysterious lake where choices echo across timelines.</p>
                     <a href="books.html" class="btn-outline">View</a>
                 </article>
 
                 <article class="card">
                     <div class="card-tag cursive gold-bg">Comic</div>
                     <h3 class="card-title cursive gold-bg">New Civil War</h3>
-                    <p>A bold, alternate‑history comic exploring power, loyalty, and the cost of standing on the wrong side.</p>
+                    <p>An alternate‑history comic exploring power, loyalty, and consequence.</p>
                     <a href="books.html" class="btn-outline">View</a>
                 </article>
 
                 <article class="card">
                     <div class="card-tag cursive gold-bg">Novel</div>
                     <h3 class="card-title cursive gold-bg">Hidden Breath</h3>
-                    <p>A quiet, intense story about the weight we carry and the moments that finally let us exhale.</p>
+                    <p>A quiet, intense story about the weight we carry and the moments that let us exhale.</p>
                     <a href="books.html" class="btn-outline">View</a>
                 </article>
 
                 <article class="card">
                     <div class="card-tag cursive gold-bg">Novel • Part II</div>
                     <h3 class="card-title cursive gold-bg">Hidden Breath • Part 2</h3>
-                    <p>The continuation — deeper, sharper, and closer to the truth that’s been hiding in plain sight.</p>
+                    <p>The continuation — deeper, sharper, closer to the truth hiding in plain sight.</p>
                     <a href="books.html" class="btn-outline">View</a>
                 </article>
             </div>
@@ -189,8 +190,7 @@
         <section class="section" style="text-align: center;">
             <h2 class="section-title cursive gold-bg">Your Story Deserves a Home</h2>
             <p class="cursive gold-bg" style="max-width: 700px; margin: 0 auto 20px;">
-                Whether you're writing your first book, building a comic universe, or turning your life into
-                something visual and unforgettable — Boardwalk Publishing is where your story becomes legacy.
+                Whether you're writing your first book or building a comic universe — we help bring it to life.
             </p>
             <a href="contact.html" class="btn-gold">Start Your Journey</a>
         </section>
