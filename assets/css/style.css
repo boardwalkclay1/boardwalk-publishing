@@ -235,3 +235,14 @@ footer {
     opacity: 0.8;
     font-size: 1.4rem;
 }
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* space between logo and title */
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
