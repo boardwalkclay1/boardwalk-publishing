@@ -4,66 +4,135 @@
     <meta charset="UTF-8">
     <title>Boardwalk Publishing • How It Works</title>
 
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="../manifest.json">
+
+    <!-- SOCIAL PREVIEW -->
+    <meta property="og:title" content="Boardwalk Publishing • How It Works">
+    <meta property="og:description" content="A clear, cinematic path from idea to finished release.">
+    <meta property="og:image" content="../assets/img/social-preview.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://boardwalkclay1.github.io/pages/how-it-works.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Boardwalk Publishing • How It Works">
+    <meta name="twitter:description" content="A clear, cinematic path from idea to finished release.">
+    <meta name="twitter:image" content="../assets/img/social-preview.png">
 
     <style>
-        .cursive { font-family: 'Great Vibes', cursive !important; }
+        /* Override old inline cursive */
+        .cursive {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Remove old gold blocks */
         .gold-bg {
-            background: rgba(0,0,0,0.55);
-            padding: 8px 14px;
-            border-radius: 8px;
-            display: inline-block;
+            background: none !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
         }
-        .nav-btn {
-            background: rgba(0,0,0,0.55);
-            padding: 10px 18px;
-            border-radius: 999px;
-            color: var(--gold-rich);
-            text-decoration: none;
-            margin-left: 12px;
-            border: 1px solid var(--gold-soft);
+
+        /* Clean nav (no bubbles) */
+        nav a {
+            background: none !important;
+            border: none !important;
+            padding: 0 !important;
+            margin-left: 22px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold-rich) !important;
             transition: 0.25s;
-            font-family: 'Great Vibes', cursive;
         }
-        .nav-btn:hover,
-        .nav-btn.active {
+        nav a:hover,
+        nav a.active {
+            color: #fff !important;
+        }
+
+        /* Bubble buttons for section links */
+        .bubble-link {
+            display: inline-block;
+            padding: 10px 22px;
+            border-radius: 999px;
+            border: 1px solid var(--gold-soft);
+            background: rgba(0,0,0,0.55);
+            color: var(--gold-rich) !important;
+            font-size: 1rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: 0.25s;
+        }
+        .bubble-link:hover {
             background: var(--gold-rich);
-            color: #000;
+            color: #000 !important;
             border-color: var(--gold-rich);
         }
-        .brand { display:flex; align-items:center; gap:20px; }
+
+        /* Even spacing */
+        .section {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .section p {
+            max-width: 720px;
+            margin: 0 auto;
+            font-size: 1.6rem;
+        }
+
+        .hero {
+            padding-top: 140px;
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
 
-<div class="feather"></div><div class="feather"></div><div class="feather"></div><div class="feather"></div><div class="feather"></div>
+<!-- FEATHERS -->
+<div class="feather"></div>
+<div class="feather"></div>
+<div class="feather"></div>
+<div class="feather"></div>
+<div class="feather"></div>
 
 <div class="wrapper">
 
+    <!-- HEADER -->
     <header>
         <div class="brand">
-            <img src="assets/img/publish-logo.JPG" alt="Boardwalk Publishing Logo" class="brand-logo-img">
+            <img src="../assets/img/publish-logo.JPG" alt="Boardwalk Publishing Logo" class="brand-logo-img">
             <div class="brand-text">
-                <div class="brand-name cursive gold-bg">Boardwalk Publishing</div>
+                <div class="brand-name cursive">Boardwalk Publishing</div>
             </div>
         </div>
 
         <nav>
-            <a href="index.html" class="nav-btn cursive">Home</a>
-            <a href="books.html" class="nav-btn cursive">Books</a>
-            <a href="about.html" class="nav-btn cursive">About</a>
-            <a href="contact.html" class="nav-btn cursive">Contact</a>
+            <a href="../index.html" class="cursive">Home</a>
+            <a href="books.html" class="cursive">Books</a>
+            <a href="about.html" class="cursive">About</a>
+            <a href="contact.html" class="cursive">Contact</a>
         </nav>
     </header>
 
+    <!-- HERO -->
     <main>
         <section class="hero">
-            <h1 class="hero-title cursive gold-bg">How Publishing Works</h1>
-            <p class="hero-sub cursive gold-bg" style="max-width: 720px;">
+            <h1 class="hero-title cursive">How Publishing Works</h1>
+
+            <p class="hero-sub cursive">
                 A clear, step‑by‑step path from idea to finished release.
             </p>
         </section>
@@ -71,56 +140,63 @@
         <div class="gold-bar"></div>
         <div class="gold-diamond"></div>
 
+        <!-- STEP 1 -->
         <section class="section">
-            <h2 class="section-title cursive gold-bg">Step 1 — Submit</h2>
-            <p class="cursive gold-bg" style="max-width: 720px;">
-                You send us your story, outline, or concept through the Publish With Us page. We review it to see
-                if it fits our lane and what level of build it needs.
+            <h2 class="section-title cursive">Step 1 — Submit</h2>
+            <p class="cursive">
+                You send us your story, outline, or concept through the Publish With Us page.  
+                We review it to see if it fits our lane and what level of build it needs.
             </p>
         </section>
 
         <div class="gold-bar"></div>
 
+        <!-- STEP 2 -->
         <section class="section">
-            <h2 class="section-title cursive gold-bg">Step 2 — Develop</h2>
-            <p class="cursive gold-bg" style="max-width: 720px;">
-                We work with you on structure, pacing, and clarity. This is where we shape the story into something
-                that can carry a full book or comic.
+            <h2 class="section-title cursive">Step 2 — Develop</h2>
+            <p class="cursive">
+                We work with you on structure, pacing, and clarity.  
+                This is where we shape the story into something that can carry a full book or comic.
             </p>
         </section>
 
         <div class="gold-bar"></div>
 
+        <!-- STEP 3 -->
         <section class="section">
-            <h2 class="section-title cursive gold-bg">Step 3 — Design & Build</h2>
-            <p class="cursive gold-bg" style="max-width: 720px;">
-                We handle editing, layout, typography, cover design, and comic production. This is where your story
-                becomes a visual object, not just a document.
+            <h2 class="section-title cursive">Step 3 — Design & Build</h2>
+            <p class="cursive">
+                We handle editing, layout, typography, cover design, and comic production.  
+                This is where your story becomes a visual object, not just a document.
             </p>
         </section>
 
         <div class="gold-bar"></div>
 
+        <!-- STEP 4 -->
         <section class="section">
-            <h2 class="section-title cursive gold-bg">Step 4 — Release & Display</h2>
-            <p class="cursive gold-bg" style="max-width: 720px;">
-                Once everything is approved, we release your work digitally and, if selected, display it in the
-                Boardwalk catalog with a premium presentation.
+            <h2 class="section-title cursive">Step 4 — Release & Display</h2>
+            <p class="cursive">
+                Once everything is approved, we release your work digitally and, if selected,  
+                display it in the Boardwalk catalog with a premium presentation.
             </p>
         </section>
 
         <div class="gold-bar"></div>
 
-        <section class="section" style="text-align:center;">
-            <h2 class="section-title cursive gold-bg">Ready to Start Step 1?</h2>
-            <p class="cursive gold-bg" style="max-width: 700px; margin: 0 auto 20px;">
+        <!-- FINAL CTA -->
+        <section class="section">
+            <h2 class="section-title cursive">Ready to Start Step 1?</h2>
+            <p class="cursive">
                 If you’re ready to move from idea to build, start with a submission.
             </p>
-            <a href="publish.html" class="btn-gold">Publish With Us</a>
+
+            <a href="publish.html" class="btn-gold" style="margin-top: 20px;">Publish With Us</a>
         </section>
+
     </main>
 
-    <footer class="cursive gold-bg">
+    <footer>
         © Boardwalk Publishing • All Rights Reserved
     </footer>
 
