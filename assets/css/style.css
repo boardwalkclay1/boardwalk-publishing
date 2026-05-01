@@ -8,31 +8,6 @@
 /* FONT IMPORT */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 
-/* GLOBAL FONT */
-body {
-    font-family: 'Cormorant Garamond', serif !important;
-    color: var(--text);
-}
-
-/* CURSIVE CLASS (STRONGEST RULE) */
-.cursive {
-    font-family: 'Cormorant Garamond', serif !important;
-    font-weight: 600 !important;
-    letter-spacing: .5px !important;
-}
-
-/* FORCE ALL MAIN TITLES */
-h1, h2, h3,
-.hero-title,
-.section-title,
-.card-title,
-.book-title {
-    font-family: 'Cormorant Garamond', serif !important;
-    font-weight: 700 !important;
-    letter-spacing: .5px !important;
-    color: var(--gold-rich) !important;
-}
-
 /* ROOT COLORS */
 :root {
     --black: #000;
@@ -43,12 +18,33 @@ h1, h2, h3,
     --text: #f2f2f2;
 }
 
-/* BACKGROUND */
+/* GLOBAL FONT + BACKGROUND */
 body {
+    font-family: 'Cormorant Garamond', serif !important;
+    color: var(--text);
     background: radial-gradient(circle at top, #0a0a0a 0%, #000 70%, #000 100%);
     overflow-x: hidden;
     min-height: 100vh;
     position: relative;
+}
+
+/* CURSIVE CLASS */
+.cursive {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 600 !important;
+    letter-spacing: .5px !important;
+}
+
+/* TITLES */
+h1, h2, h3,
+.hero-title,
+.section-title,
+.card-title,
+.book-title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 700 !important;
+    letter-spacing: .5px !important;
+    color: var(--gold-rich) !important;
 }
 
 /* LINKS */
@@ -68,6 +64,31 @@ header {
     z-index: 20;
 }
 
+/* LOGO SIZING */
+header .logo,
+header img.logo,
+.logo img {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+    display: block;
+}
+
+/* BRAND WRAPPER */
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* BRAND NAME */
+.brand-name {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 4rem;
+    color: var(--gold-rich);
+    text-shadow: 0 0 14px var(--gold-glow);
+}
+
 /* NAV */
 nav a {
     font-family: 'Cormorant Garamond', serif !important;
@@ -78,14 +99,6 @@ nav a {
 nav a:hover,
 nav a.active {
     color: #fff !important;
-}
-
-/* BRAND */
-.brand-name {
-    font-family: 'Cormorant Garamond', serif !important;
-    font-size: 4rem;
-    color: var(--gold-rich);
-    text-shadow: 0 0 14px var(--gold-glow);
 }
 
 /* HERO */
