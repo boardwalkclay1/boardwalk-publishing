@@ -4,142 +4,57 @@
     <meta charset="UTF-8">
     <title>Boardwalk Publishing • Home</title>
 
-    <!-- FORCE LOAD CURSIVE FONT DIRECTLY -->
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- INLINE FIXES -->
     <style>
-        .cursive { font-family: 'Great Vibes', cursive !important; }
-
-        /* Slightly bigger cursive descriptions */
-        .hero-sub,
-        .section p.cursive,
-        .pill,
-        .quick-link-btn {
-            font-size: 1.35rem !important;
-        }
-
-        .gold-bg {
-            background: rgba(0,0,0,0.55);
-            padding: 8px 14px;
-            border-radius: 8px;
-            display: inline-block;
-        }
+        /* REMOVE BLOCKS BEHIND TEXT */
+        .gold-bg,
         .gold-bg-wide {
-            background: rgba(0,0,0,0.55);
-            padding: 14px 20px;
-            border-radius: 10px;
-            display: inline-block;
+            background: none !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
         }
 
+        /* REMOVE BUBBLE NAV BUTTONS */
         .nav-btn {
-            background: rgba(0,0,0,0.55);
-            padding: 10px 18px;
-            border-radius: 999px;
-            color: var(--gold-rich);
-            text-decoration: none;
-            margin-left: 12px;
-            border: 1px solid var(--gold-soft);
-            transition: 0.25s;
+            background: none !important;
+            border: none !important;
+            padding: 0 !important;
+            color: var(--gold-rich) !important;
             font-family: 'Great Vibes', cursive;
+            font-size: 1.8rem;
+            transition: 0.25s;
         }
         .nav-btn:hover,
         .nav-btn.active {
-            background: var(--gold-rich);
-            color: #000;
-            border-color: var(--gold-rich);
+            color: #fff !important;
         }
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .hero-actions {
-            margin-top: 26px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
+        /* SOLID BLACK HEADER BAR */
+        header {
+            background: #000 !important;
+            width: 100%;
+            padding: 30px 0;
             position: relative;
-            z-index: 10;
+            z-index: 20;
         }
 
-        .btn-outline {
-            display: inline-block;
-            padding: 12px 26px;
-            border-radius: 999px;
-            border: 1px solid var(--gold-soft);
-            color: var(--gold-rich);
-            text-decoration: none;
-            letter-spacing: 0.08em;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            background: rgba(0,0,0,0.55);
-            transition: 0.25s;
-        }
-        .btn-outline:hover {
-            background: var(--gold-rich);
-            color: #000;
-            border-color: var(--gold-rich);
+        /* EXTEND BLACK UNDER LOGO */
+        .brand {
+            background: #000;
+            padding: 10px 0;
         }
 
-        .section { margin-top: 40px; }
-
-        .section-row {
-            display: grid;
-            grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
-            gap: 28px;
-            align-items: flex-start;
-        }
-
-        .pill-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 14px;
-        }
-        .pill {
-            border-radius: 999px;
-            border: 1px solid var(--gold-soft);
-            padding: 6px 14px;
-            background: rgba(0,0,0,0.55);
-        }
-
-        .quick-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 18px;
-            justify-content: center;
-        }
-        .quick-link-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 999px;
-            border: 1px solid var(--gold-soft);
-            background: rgba(0,0,0,0.55);
-            color: var(--gold-rich);
-            text-decoration: none;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            transition: 0.25s;
-        }
-        .quick-link-btn:hover {
-            background: var(--gold-rich);
-            color: #000;
-            border-color: var(--gold-rich);
-        }
-
-        footer {
-            font-family: 'Poppins', sans-serif !important;
-            font-size: 1rem !important;
-            letter-spacing: 0.05em;
+        /* MAKE CURSIVE TEXT MORE READABLE */
+        .hero-sub,
+        .section p.cursive {
+            font-size: 1.45rem !important;
         }
     </style>
 </head>
@@ -160,7 +75,7 @@
         <div class="brand">
             <img src="assets/img/publish-logo.JPG" alt="Boardwalk Publishing Logo" class="brand-logo-img">
             <div class="brand-text">
-                <div class="brand-name cursive gold-bg">Boardwalk Publishing</div>
+                <div class="brand-name cursive">Boardwalk Publishing</div>
             </div>
         </div>
 
@@ -175,9 +90,9 @@
     <!-- HERO -->
     <main>
         <section class="hero">
-            <h1 class="hero-title cursive gold-bg-wide">Where Stories Become Legacy.</h1>
+            <h1 class="hero-title cursive">Where Stories Become Legacy.</h1>
 
-            <p class="hero-sub cursive gold-bg" style="max-width: 720px;">
+            <p class="hero-sub cursive" style="max-width: 720px;">
                 A private publishing studio for creators who want their stories crafted, elevated, and presented with intention.
             </p>
 
@@ -194,15 +109,15 @@
         <section class="section">
             <div class="section-row">
                 <div>
-                    <h2 class="section-title cursive gold-bg">What We Are</h2>
-                    <p class="cursive gold-bg" style="max-width: 720px; margin-top: 12px;">
+                    <h2 class="section-title cursive">What We Are</h2>
+                    <p class="cursive" style="max-width: 720px; margin-top: 12px;">
                         Boardwalk Publishing is a private, cinematic publishing house built for authors, comic creators,
                         and storytellers who want their work treated like art. We specialize in premium presentation,
                         emotional storytelling, and polished digital releases.
                     </p>
                 </div>
                 <div>
-                    <h3 class="card-title cursive gold-bg">Built For</h3>
+                    <h3 class="card-title cursive">Built For</h3>
                     <div class="pill-row">
                         <span class="pill cursive">Novels</span>
                         <span class="pill cursive">Comics</span>
@@ -218,29 +133,29 @@
 
         <!-- WHAT WE DO -->
         <section class="section">
-            <h2 class="section-title cursive gold-bg">What We Do</h2>
+            <h2 class="section-title cursive">What We Do</h2>
 
             <div class="grid" style="margin-top: 18px;">
                 <article class="card">
-                    <h3 class="card-title cursive gold-bg">Book Publishing</h3>
+                    <h3 class="card-title cursive">Book Publishing</h3>
                     <p>We take your manuscript and turn it into a polished, premium digital book.</p>
                     <a href="pages/services.html" class="btn-outline">Book Services</a>
                 </article>
 
                 <article class="card">
-                    <h3 class="card-title cursive gold-bg">Comic Production</h3>
+                    <h3 class="card-title cursive">Comic Production</h3>
                     <p>We help creators turn stories into cinematic comics with full art direction.</p>
                     <a href="pages/services.html" class="btn-outline">Comic Services</a>
                 </article>
 
                 <article class="card">
-                    <h3 class="card-title cursive gold-bg">Story Development</h3>
+                    <h3 class="card-title cursive">Story Development</h3>
                     <p>We help shape your ideas into structured, compelling stories ready for release.</p>
                     <a href="pages/services.html" class="btn-outline">Development</a>
                 </article>
 
                 <article class="card">
-                    <h3 class="card-title cursive gold-bg">Author Services</h3>
+                    <h3 class="card-title cursive">Author Services</h3>
                     <p>Branding, display pages, catalog placement, and premium presentation for your work.</p>
                     <a href="pages/services.html" class="btn-outline">Author Services</a>
                 </article>
@@ -251,8 +166,8 @@
 
         <!-- HOW IT WORKS -->
         <section class="section">
-            <h2 class="section-title cursive gold-bg">How It Works</h2>
-            <p class="cursive gold-bg" style="max-width: 720px; margin-top: 12px;">
+            <h2 class="section-title cursive">How It Works</h2>
+            <p class="cursive" style="max-width: 720px; margin-top: 12px;">
                 Simple, clear path from idea to release:
             </p>
             <div class="pill-row">
@@ -270,8 +185,8 @@
 
         <!-- QUICK LINKS -->
         <section class="section" style="text-align: center;">
-            <h2 class="section-title cursive gold-bg">Explore Boardwalk</h2>
-            <p class="cursive gold-bg" style="max-width: 700px; margin: 0 auto 18px;">
+            <h2 class="section-title cursive">Explore Boardwalk</h2>
+            <p class="cursive" style="max-width: 700px; margin: 0 auto 18px;">
                 Learn who we are, what we offer, and how to get your story into our world.
             </p>
 
@@ -288,8 +203,8 @@
 
         <!-- FINAL CTA -->
         <section class="section" style="text-align: center;">
-            <h2 class="section-title cursive gold-bg">Your Story Deserves a Home</h2>
-            <p class="cursive gold-bg" style="max-width: 700px; margin: 0 auto 20px;">
+            <h2 class="section-title cursive">Your Story Deserves a Home</h2>
+            <p class="cursive" style="max-width: 700px; margin: 0 auto 20px;">
                 Whether you're writing your first book or building a comic universe — Boardwalk Publishing
                 helps bring your vision to life.
             </p>
@@ -298,7 +213,6 @@
 
     </main>
 
-    <!-- FOOTER (NO CURSIVE) -->
     <footer>
         © Boardwalk Publishing • All Rights Reserved
     </footer>
