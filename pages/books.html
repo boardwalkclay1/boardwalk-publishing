@@ -17,165 +17,11 @@
 
     <!-- MANIFEST -->
     <link rel="manifest" href="../manifest.json">
-
-    <style>
-        /* MAKE ALL TITLES CURSIVE */
-        h1, h2, h3,
-        .hero-title,
-        .section-title,
-        .book-title {
-            font-family: 'Cormorant Garamond', serif !important;
-            font-weight: 700 !important;
-            letter-spacing: .5px !important;
-            color: var(--gold-rich) !important;
-        }
-
-        .cursive {
-            font-family: 'Cormorant Garamond', serif !important;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            color: var(--gold-rich) !important;
-        }
-
-        .blk {
-            background: rgba(0,0,0,0.55);
-            padding: 10px 18px;
-            border-radius: 10px;
-            display: inline-block;
-        }
-
-        body {
-            background: url('../assets/img/bp-back.jpg') no-repeat center center fixed !important;
-            background-size: cover !important;
-        }
-
-        header {
-            padding: 28px 0;
-        }
-
-        nav a {
-            background: none !important;
-            border: none !important;
-            padding: 0 !important;
-            margin-left: 22px;
-            font-family: 'Cormorant Garamond', serif !important;
-            font-size: 2rem;
-            color: var(--gold-rich) !important;
-            transition: 0.25s;
-            text-decoration: none;
-        }
-        nav a:hover,
-        nav a.active {
-            color: #fff !important;
-        }
-
-        .hero {
-            padding-top: 140px;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .hero-sub {
-            font-size: 1.7rem;
-            max-width: 720px;
-            margin: 0 auto;
-        }
-
-        .section {
-            margin-top: 70px;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .section-label {
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
-            font-size: 0.9rem;
-            color: var(--gold-rich);
-        }
-
-        .book-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 26px;
-        }
-
-        .book-card {
-            border-radius: 16px;
-            padding: 22px 22px 24px;
-            background: rgba(0,0,0,0.65);
-            border: 1px solid var(--gold-soft);
-            box-shadow: inset 0 0 14px rgba(185,151,47,0.16);
-        }
-
-        .book-type {
-            font-size: 0.9rem;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            color: var(--gold-rich);
-            margin-bottom: 6px;
-        }
-
-        .book-desc {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        .book-meta {
-            font-size: 0.9rem;
-            opacity: 0.85;
-            margin-bottom: 16px;
-        }
-
-        .book-actions {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 8px;
-        }
-
-        .btn-gold,
-        .btn-outline {
-            color: #000 !important;
-        }
-
-        .book-price {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--gold-rich);
-            margin-bottom: 12px;
-        }
-
-        .contact-note {
-            max-width: 760px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        .section.bottom-section {
-            margin-top: 70px;
-            padding-bottom: 80px;
-            text-align: center;
-        }
-
-        .bottom-section .contact-note {
-            margin-bottom: 24px;
-        }
-
-        .bottom-section .btn-outline {
-            display: inline-block;
-            margin-top: 16px;
-        }
-    </style>
 </head>
+
 <body>
 
+<!-- FEATHERS -->
 <div class="feather"></div>
 <div class="feather"></div>
 <div class="feather"></div>
@@ -184,12 +30,11 @@
 
 <div class="wrapper">
 
+    <!-- HEADER -->
     <header>
-        <div class="brand">
+        <div class="brand-wrapper">
             <img src="../assets/img/publish-logo.JPG" alt="Boardwalk Publishing Logo" class="brand-logo-img">
-            <div class="brand-text">
-                <div class="brand-name cursive">Boardwalk Publishing</div>
-            </div>
+            <div class="brand-name cursive">Boardwalk Publishing</div>
         </div>
 
         <nav>
@@ -200,10 +45,11 @@
         </nav>
     </header>
 
+    <!-- HERO -->
     <main>
         <section class="hero">
-            <h1 class="hero-title blk">Boardwalk Library</h1>
-            <p class="hero-sub cursive blk">
+            <h1 class="hero-title">Boardwalk Library</h1>
+            <p class="hero-sub cursive">
                 A black‑and‑gold catalog of books and comics built inside the Boardwalk Publishing world.
             </p>
         </section>
@@ -211,11 +57,9 @@
         <div class="gold-bar"></div>
         <div class="gold-diamond"></div>
 
+        <!-- CATALOG -->
         <section class="section">
-            <div class="section-header">
-                <div class="section-label">Catalog</div>
-                <h2 class="section-title blk">Books &amp; Comics</h2>
-            </div>
+            <h2 class="section-title">Books &amp; Comics</h2>
 
             <div class="book-list">
 
@@ -272,20 +116,18 @@
 
         <div class="gold-bar"></div>
 
-        <section class="section bottom-section">
-            <div class="section-header">
-                <div class="section-label">For Authors</div>
-                <h2 class="section-title blk">Display Your Book Here</h2>
-            </div>
+        <!-- AUTHOR CTA -->
+        <section class="section">
+            <h2 class="section-title">Display Your Book Here</h2>
 
-            <p class="contact-note cursive blk">
+            <p class="cursive" style="max-width:760px;margin:0 auto;">
                 We offer a limited number of black‑and‑gold display slots for authors.
-                <br><br>
                 Reach out through the Contact Page below.
             </p>
 
-            <a href="contact.html" class="btn-outline" style="color:#000 !important;">Contact Page</a>
+            <a href="contact.html" class="btn-outline" style="margin-top:20px;">Contact Page</a>
         </section>
+
     </main>
 
     <footer>
