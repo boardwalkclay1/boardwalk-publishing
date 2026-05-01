@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <title>Boardwalk Publishing • Home</title>
 
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
+    <!-- MAIN CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- SOCIAL PREVIEW -->
+    <meta property="og:title" content="Boardwalk Publishing">
+    <meta property="og:description" content="A private cinematic publishing studio for books, comics, and personal stories.">
+    <meta property="og:image" content="assets/img/social-preview.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://boardwalkclay1.github.io/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Boardwalk Publishing">
+    <meta name="twitter:description" content="A private cinematic publishing studio for books, comics, and personal stories.">
+    <meta name="twitter:image" content="assets/img/social-preview.png">
+
+    <!-- INLINE FIXES -->
     <style>
         .cursive { font-family: 'Great Vibes', cursive !important; }
 
@@ -21,22 +42,24 @@
             border-radius: 0 !important;
         }
 
-        /* REMOVE BUBBLE NAV BUTTONS */
-        .nav-btn {
+        /* REMOVE BUBBLE NAV BUTTONS + REMOVE BLUE LINKS FOREVER */
+        nav a,
+        a {
             background: none !important;
             border: none !important;
             padding: 0 !important;
             color: var(--gold-rich) !important;
+            text-decoration: none !important;
             font-family: 'Great Vibes', cursive;
             font-size: 1.8rem;
             transition: 0.25s;
         }
-        .nav-btn:hover,
-        .nav-btn.active {
+        nav a:hover,
+        nav a.active {
             color: #fff !important;
         }
 
-        /* BLACK BAR BEHIND HEADER */
+        /* BLACK HEADER BAR */
         header {
             background: #000 !important;
             padding: 30px 0;
@@ -52,7 +75,7 @@
 
         /* FIX HERO OVERLAP */
         .hero {
-            padding-top: 120px !important;
+            padding-top: 140px !important;
             position: relative;
             z-index: 10;
         }
@@ -67,6 +90,7 @@
 
 <body>
 
+<!-- FEATHERS -->
 <div class="feather"></div>
 <div class="feather"></div>
 <div class="feather"></div>
@@ -75,22 +99,24 @@
 
 <div class="wrapper">
 
+    <!-- HEADER -->
     <header>
         <div class="brand">
-            <img src="assets/img/publish-logo.JPG" class="brand-logo-img">
+            <img src="assets/img/publish-logo.JPG" alt="Boardwalk Publishing Logo" class="brand-logo-img">
             <div class="brand-text">
                 <div class="brand-name cursive">Boardwalk Publishing</div>
             </div>
         </div>
 
         <nav>
-            <a href="index.html" class="nav-btn active cursive">Home</a>
-            <a href="pages/books.html" class="nav-btn cursive">Books</a>
-            <a href="pages/about.html" class="nav-btn cursive">About</a>
-            <a href="pages/contact.html" class="nav-btn cursive">Contact</a>
+            <a href="index.html" class="active cursive">Home</a>
+            <a href="pages/books.html" class="cursive">Books</a>
+            <a href="pages/about.html" class="cursive">About</a>
+            <a href="pages/contact.html" class="cursive">Contact</a>
         </nav>
     </header>
 
+    <!-- HERO -->
     <main>
         <section class="hero">
             <h1 class="hero-title cursive">Where Stories Become Legacy.</h1>
@@ -108,6 +134,7 @@
         <div class="gold-bar"></div>
         <div class="gold-diamond"></div>
 
+        <!-- WHAT WE ARE -->
         <section class="section">
             <div class="section-row">
                 <div>
@@ -132,6 +159,7 @@
 
         <div class="gold-bar"></div>
 
+        <!-- WHAT WE DO -->
         <section class="section">
             <h2 class="section-title cursive">What We Do</h2>
 
@@ -164,6 +192,7 @@
 
         <div class="gold-bar"></div>
 
+        <!-- HOW IT WORKS -->
         <section class="section">
             <h2 class="section-title cursive">How It Works</h2>
             <p class="cursive" style="max-width: 720px; margin-top: 12px;">
@@ -182,6 +211,7 @@
 
         <div class="gold-bar"></div>
 
+        <!-- QUICK LINKS -->
         <section class="section" style="text-align: center;">
             <h2 class="section-title cursive">Explore Boardwalk</h2>
             <p class="cursive" style="max-width: 700px; margin: 0 auto 18px;">
@@ -199,6 +229,7 @@
 
         <div class="gold-bar"></div>
 
+        <!-- FINAL CTA -->
         <section class="section" style="text-align: center;">
             <h2 class="section-title cursive">Your Story Deserves a Home</h2>
             <p class="cursive" style="max-width: 700px; margin: 0 auto 20px;">
