@@ -18,18 +18,6 @@
     <!-- MANIFEST -->
     <link rel="manifest" href="manifest.json">
 
-    <!-- SOCIAL PREVIEW -->
-    <meta property="og:title" content="Boardwalk Publishing">
-    <meta property="og:description" content="A private cinematic publishing studio for books, comics, and personal stories.">
-    <meta property="og:image" content="assets/img/social-preview.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://boardwalkclay1.github.io/">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Boardwalk Publishing">
-    <meta name="twitter:description" content="A private cinematic publishing studio for books, comics, and personal stories.">
-    <meta name="twitter:image" content="assets/img/social-preview.png">
-
     <style>
         /* FIXED LOGO SIZE */
         .brand-logo-img {
@@ -39,98 +27,138 @@
             display: block;
         }
 
-        /* GLOBAL CURSIVE */
+        /* CURSIVE */
         .cursive {
-            font-family: 'Cormorant Garamond', serif !important;
-            font-weight: 600 !important;
-            letter-spacing: .5px !important;
+            font-family:'Cormorant Garamond',serif!important;
+            font-weight:600!important;
+            letter-spacing:.5px!important;
+            color:var(--gold-rich)!important;
         }
 
         /* TITLES */
         h1, h2, .hero-title, .section-title {
-            font-family: 'Cormorant Garamond', serif !important;
-            font-weight: 700 !important;
-            letter-spacing: .5px !important;
-            color: var(--gold-rich) !important;
+            font-family:'Cormorant Garamond',serif!important;
+            font-weight:700!important;
+            letter-spacing:.5px!important;
+            color:var(--gold-rich)!important;
         }
 
-        /* CLEAN NAV */
+        /* NAV */
         nav a {
-            background: none !important;
-            border: none !important;
-            padding: 0 !important;
-            color: var(--gold-rich) !important;
-            text-decoration: none !important;
-            font-family: 'Cormorant Garamond', serif !important;
-            transition: 0.25s;
-            font-size: 1.8rem;
-            margin-left: 22px;
+            background:none!important;
+            border:none!important;
+            padding:0!important;
+            margin-left:22px;
+            font-family:'Cormorant Garamond',serif!important;
+            font-size:1.8rem;
+            color:var(--gold-rich)!important;
+            transition:.25s;
+            text-decoration:none!important;
         }
         nav a:hover,
         nav a.active {
-            color: #fff !important;
+            color:#fff!important;
         }
 
         /* BUBBLE BUTTONS */
         .bubble-link {
-            display: inline-block;
-            padding: 10px 22px;
-            border-radius: 999px;
-            border: 1px solid var(--gold-soft);
-            background: rgba(0,0,0,0.55);
-            color: var(--gold-rich) !important;
-            font-size: 1rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            transition: 0.25s;
+            display:inline-block;
+            padding:10px 22px;
+            border-radius:999px;
+            border:1px solid var(--gold-soft);
+            background:rgba(0,0,0,.55);
+            color:var(--gold-rich)!important;
+            font-size:1rem;
+            letter-spacing:.08em;
+            text-transform:uppercase;
+            transition:.25s;
         }
         .bubble-link:hover {
-            background: var(--gold-rich);
-            color: #000 !important;
-            border-color: var(--gold-rich);
+            background:var(--gold-rich);
+            color:#000!important;
+        }
+
+        /* GOLD BUTTONS WITH BLACK TEXT */
+        .btn-gold {
+            background:var(--gold-rich);
+            color:#000!important;
+            padding:14px 32px;
+            border-radius:999px;
+            border:1px solid var(--gold-deep);
+            font-weight:600;
+            letter-spacing:.1em;
+            transition:.25s;
+        }
+        .btn-gold:hover {
+            background:#d8b85a;
+            color:#000!important;
+        }
+
+        /* OUTLINE BUTTON */
+        .btn-outline {
+            border:1px solid var(--gold-soft);
+            padding:12px 28px;
+            border-radius:999px;
+            background:rgba(0,0,0,.55);
+            color:#000!important;
+            text-transform:uppercase;
+            letter-spacing:.08em;
+            transition:.25s;
+        }
+        .btn-outline:hover {
+            background:var(--gold-rich);
+            color:#000!important;
         }
 
         /* HEADER */
         header {
-            background: #000 !important;
-            padding: 30px 0;
-            position: relative;
-            z-index: 20;
+            background:#000!important;
+            padding:30px 0;
+            position:relative;
+            z-index:20;
         }
 
         .brand {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            background: #000;
-            padding: 10px 0;
+            display:flex;
+            align-items:center;
+            gap:14px;
+            background:#000;
+            padding:10px 0;
         }
 
         /* HERO */
         .hero {
-            padding-top: 140px !important;
-            text-align: center;
+            padding-top:140px!important;
+            text-align:center;
+        }
+
+        .hero-sub {
+            font-size:1.6rem!important;
+            max-width:720px;
+            margin:0 auto;
         }
 
         /* SECTIONS */
         .section {
-            margin-top: 80px;
-            text-align: center;
+            margin-top:80px;
+            text-align:center;
         }
 
         .section-row {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            flex-wrap: wrap;
-            margin-top: 20px;
+            display:flex;
+            justify-content:center;
+            gap:60px;
+            flex-wrap:wrap;
+            margin-top:20px;
         }
 
-        .hero-sub,
-        .section p.cursive {
-            font-size: 1.6rem !important;
-            max-width: 720px;
-            margin: 0 auto;
+        /* FIX BOTTOM BUTTON OVERLAP */
+        .section:last-of-type {
+            padding-bottom:100px; /* adds breathing room */
+        }
+        .section:last-of-type .btn-gold {
+            margin-top:30px;
+            display:inline-block;
         }
     </style>
 </head>
@@ -138,160 +166,146 @@
 <body>
 
 <!-- FEATHERS -->
-<div class="feather"></div>
-<div class="feather"></div>
-<div class="feather"></div>
-<div class="feather"></div>
-<div class="feather"></div>
+<div class="feather"></div><div class="feather"></div><div class="feather"></div><div class="feather"></div><div class="feather"></div>
 
 <div class="wrapper">
 
-    <!-- HEADER -->
-    <header>
-        <div class="brand">
-            <img src="assets/img/publish-logo.JPG" alt="Boardwalk Publishing Logo" class="brand-logo-img">
-            <div class="brand-text">
-                <div class="brand-name cursive">Boardwalk Publishing</div>
-            </div>
+<header>
+    <div class="brand">
+        <img src="assets/img/publish-logo.JPG" class="brand-logo-img">
+        <div class="brand-text">
+            <div class="brand-name cursive">Boardwalk Publishing</div>
         </div>
+    </div>
 
-        <nav>
-            <a href="index.html" class="active cursive">Home</a>
-            <a href="pages/books.html" class="cursive">Books</a>
-            <a href="pages/about.html" class="cursive">About</a>
-            <a href="pages/contact.html" class="cursive">Contact</a>
-        </nav>
-    </header>
+    <nav>
+        <a href="index.html" class="cursive active">Home</a>
+        <a href="pages/books.html" class="cursive">Books</a>
+        <a href="pages/about.html" class="cursive">About</a>
+        <a href="pages/contact.html" class="cursive">Contact</a>
+    </nav>
+</header>
 
-    <!-- HERO -->
-    <main>
-        <section class="hero">
-            <h1 class="hero-title">Where Stories Become Legacy.</h1>
+<main>
 
-            <p class="hero-sub cursive">
-                A private publishing studio for creators who want their stories crafted, elevated, and presented with intention.
-            </p>
+<section class="hero">
+    <h1 class="hero-title">Where Stories Become Legacy.</h1>
 
-            <div class="hero-actions" style="margin-top: 30px;">
-                <a href="pages/publish.html" class="btn-gold">Publish With Us</a>
-                <a href="pages/books.html" class="btn-outline">Our Catalog</a>
-            </div>
-        </section>
+    <p class="hero-sub cursive">
+        A private publishing studio for creators who want their stories crafted, elevated, and presented with intention.
+    </p>
 
-        <div class="gold-bar"></div>
-        <div class="gold-diamond"></div>
+    <div class="hero-actions" style="margin-top:30px;">
+        <a href="pages/publish.html" class="btn-gold">Publish With Us</a>
+        <a href="pages/books.html" class="btn-outline">Our Catalog</a>
+    </div>
+</section>
 
-        <!-- WHAT WE ARE -->
-        <section class="section">
-            <h2 class="section-title">What We Are</h2>
+<div class="gold-bar"></div>
+<div class="gold-diamond"></div>
 
-            <p class="cursive">
-                Boardwalk Publishing is a private, cinematic publishing house built for authors, comic creators,
-                and storytellers who want their work treated like art.
-            </p>
+<section class="section">
+    <h2 class="section-title">What We Are</h2>
 
-            <div class="section-row">
-                <span class="bubble-link cursive">Novels</span>
-                <span class="bubble-link cursive">Comics</span>
-                <span class="bubble-link cursive">Memoirs</span>
-                <span class="bubble-link cursive">Graphic Stories</span>
-                <span class="bubble-link cursive">Personal Worlds</span>
-            </div>
-        </section>
+    <p class="cursive">
+        Boardwalk Publishing is a private, cinematic publishing house built for authors, comic creators,
+        and storytellers who want their work treated like art.
+    </p>
 
-        <div class="gold-bar"></div>
+    <div class="section-row">
+        <span class="bubble-link cursive">Novels</span>
+        <span class="bubble-link cursive">Comics</span>
+        <span class="bubble-link cursive">Memoirs</span>
+        <span class="bubble-link cursive">Graphic Stories</span>
+        <span class="bubble-link cursive">Personal Worlds</span>
+    </div>
+</section>
 
-        <!-- WHAT WE DO -->
-        <section class="section">
-            <h2 class="section-title">What We Do</h2>
+<div class="gold-bar"></div>
 
-            <div class="grid" style="margin-top: 40px;">
-                <article class="card">
-                    <h3 class="card-title cursive">Book Publishing</h3>
-                    <p>We take your manuscript and turn it into a polished, premium digital book.</p>
-                    <a href="pages/services.html" class="bubble-link">Book Services</a>
-                </article>
+<section class="section">
+    <h2 class="section-title">What We Do</h2>
 
-                <article class="card">
-                    <h3 class="card-title cursive">Comic Production</h3>
-                    <p>We help creators turn stories into cinematic comics with full art direction.</p>
-                    <a href="pages/services.html" class="bubble-link">Comic Services</a>
-                </article>
+    <div class="grid" style="margin-top:40px;">
+        <article class="card">
+            <h3 class="card-title cursive">Book Publishing</h3>
+            <p>We take your manuscript and turn it into a polished, premium digital book.</p>
+            <a href="pages/services.html" class="bubble-link">Book Services</a>
+        </article>
 
-                <article class="card">
-                    <h3 class="card-title cursive">Story Development</h3>
-                    <p>We help shape your ideas into structured, compelling stories ready for release.</p>
-                    <a href="pages/services.html" class="bubble-link">Development</a>
-                </article>
+        <article class="card">
+            <h3 class="card-title cursive">Comic Production</h3>
+            <p>We help creators turn stories into cinematic comics with full art direction.</p>
+            <a href="pages/services.html" class="bubble-link">Comic Services</a>
+        </article>
 
-                <article class="card">
-                    <h3 class="card-title cursive">Author Services</h3>
-                    <p>Branding, display pages, catalog placement, and premium presentation for your work.</p>
-                    <a href="pages/services.html" class="bubble-link">Author Services</a>
-                </article>
-            </div>
-        </section>
+        <article class="card">
+            <h3 class="card-title cursive">Story Development</h3>
+            <p>We help shape your ideas into structured, compelling stories ready for release.</p>
+            <a href="pages/services.html" class="bubble-link">Development</a>
+        </article>
 
-        <div class="gold-bar"></div>
+        <article class="card">
+            <h3 class="card-title cursive">Author Services</h3>
+            <p>Branding, display pages, catalog placement, and premium presentation for your work.</p>
+            <a href="pages/services.html" class="bubble-link">Author Services</a>
+        </article>
+    </div>
+</section>
 
-        <!-- HOW IT WORKS -->
-        <section class="section">
-            <h2 class="section-title">How It Works</h2>
+<div class="gold-bar"></div>
 
-            <p class="cursive">
-                Simple, clear path from idea to release:
-            </p>
+<section class="section">
+    <h2 class="section-title">How It Works</h2>
 
-            <div class="section-row">
-                <span class="bubble-link cursive">Submit</span>
-                <span class="bubble-link cursive">Develop</span>
-                <span class="bubble-link cursive">Design & Build</span>
-                <span class="bubble-link cursive">Release & Display</span>
-            </div>
+    <p class="cursive">Simple, clear path from idea to release:</p>
 
-            <div style="margin-top: 30px;">
-                <a href="pages/how-it-works.html" class="btn-outline">See Full Process</a>
-            </div>
-        </section>
+    <div class="section-row">
+        <span class="bubble-link cursive">Submit</span>
+        <span class="bubble-link cursive">Develop</span>
+        <span class="bubble-link cursive">Design & Build</span>
+        <span class="bubble-link cursive">Release & Display</span>
+    </div>
 
-        <div class="gold-bar"></div>
+    <div style="margin-top:30px;">
+        <a href="pages/how-it-works.html" class="btn-outline">See Full Process</a>
+    </div>
+</section>
 
-        <!-- QUICK LINKS -->
-        <section class="section">
-            <h2 class="section-title">Explore Boardwalk</h2>
+<div class="gold-bar"></div>
 
-            <p class="cursive">
-                Learn who we are, what we offer, and how to get your story into our world.
-            </p>
+<section class="section">
+    <h2 class="section-title">Explore Boardwalk</h2>
 
-            <div class="section-row">
-                <a href="pages/about.html" class="bubble-link">About</a>
-                <a href="pages/services.html" class="bubble-link">Services</a>
-                <a href="pages/publish.html" class="bubble-link">Publish</a>
-                <a href="pages/pricing.html" class="bubble-link">Pricing</a>
-                <a href="pages/faq.html" class="bubble-link">FAQ</a>
-            </div>
-        </section>
+    <p class="cursive">Learn who we are, what we offer, and how to get your story into our world.</p>
 
-        <div class="gold-bar"></div>
+    <div class="section-row">
+        <a href="pages/about.html" class="bubble-link">About</a>
+        <a href="pages/services.html" class="bubble-link">Services</a>
+        <a href="pages/publish.html" class="bubble-link">Publish</a>
+        <a href="pages/pricing.html" class="bubble-link">Pricing</a>
+        <a href="pages/faq.html" class="bubble-link">FAQ</a>
+    </div>
+</section>
 
-        <!-- FINAL CTA -->
-        <section class="section">
-            <h2 class="section-title">Your Story Deserves a Home</h2>
+<div class="gold-bar"></div>
 
-            <p class="cursive">
-                Whether you're writing your first book or building a comic universe — Boardwalk Publishing
-                helps bring your vision to life.
-            </p>
+<section class="section">
+    <h2 class="section-title">Your Story Deserves a Home</h2>
 
-            <a href="pages/publish.html" class="btn-gold" style="margin-top: 20px;">Start Your Project</a>
-        </section>
+    <p class="cursive">
+        Whether you're writing your first book or building a comic universe — Boardwalk Publishing
+        helps bring your vision to life.
+    </p>
 
-    </main>
+    <a href="pages/publish.html" class="btn-gold">Start Your Project</a>
+</section>
 
-    <footer>
-        © Boardwalk Publishing • All Rights Reserved
-    </footer>
+</main>
+
+<footer>
+    © Boardwalk Publishing • All Rights Reserved
+</footer>
 
 </div>
 </body>
