@@ -12,10 +12,19 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- INLINE FONT + BLACK BACKING + BUTTON FIX -->
+    <!-- INLINE FIXES -->
     <style>
         .cursive { font-family: 'Great Vibes', cursive !important; }
 
+        /* Slightly bigger cursive descriptions */
+        .hero-sub,
+        .section p.cursive,
+        .pill,
+        .quick-link-btn {
+            font-size: 1.35rem !important;
+        }
+
+        /* Gold backgrounds */
         .gold-bg {
             background: rgba(0,0,0,0.55);
             padding: 8px 14px;
@@ -29,6 +38,7 @@
             display: inline-block;
         }
 
+        /* Bubble nav buttons */
         .nav-btn {
             background: rgba(0,0,0,0.55);
             padding: 10px 18px;
@@ -53,18 +63,17 @@
             gap: 20px;
         }
 
-        /* HERO LAYOUT + BUTTONS NOT BEHIND ANYTHING */
-        .hero {
-            padding-top: 20px;
-        }
+        /* HERO BUTTON FIX */
         .hero-actions {
             margin-top: 26px;
             display: flex;
             flex-wrap: wrap;
             gap: 14px;
+            position: relative;
+            z-index: 10;
         }
 
-        /* BUBBLE OUTLINE BUTTONS (NO PLAIN LINKS) */
+        /* Bubble outline buttons */
         .btn-outline {
             display: inline-block;
             padding: 12px 26px;
@@ -84,10 +93,8 @@
             border-color: var(--gold-rich);
         }
 
-        /* SECTION LAYOUT UPGRADE */
-        .section {
-            margin-top: 40px;
-        }
+        /* Section layout */
+        .section { margin-top: 40px; }
 
         .section-row {
             display: grid;
@@ -106,7 +113,6 @@
             border-radius: 999px;
             border: 1px solid var(--gold-soft);
             padding: 6px 14px;
-            font-size: 0.9rem;
             background: rgba(0,0,0,0.55);
         }
 
@@ -125,7 +131,6 @@
             background: rgba(0,0,0,0.55);
             color: var(--gold-rich);
             text-decoration: none;
-            font-size: 0.95rem;
             letter-spacing: 0.06em;
             text-transform: uppercase;
             transition: 0.25s;
@@ -134,6 +139,13 @@
             background: var(--gold-rich);
             color: #000;
             border-color: var(--gold-rich);
+        }
+
+        /* REMOVE CURSIVE FROM FOOTER */
+        footer {
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 1rem !important;
+            letter-spacing: 0.05em;
         }
     </style>
 </head>
@@ -159,7 +171,7 @@
         </div>
 
         <nav>
-            <a href="index.html" class="nav-btn active cursive">Home</a>
+            <a href="/index.html" class="nav-btn active cursive">Home</a>
             <a href="/pages/books.html" class="nav-btn cursive">Books</a>
             <a href="/pages/about.html" class="nav-btn cursive">About</a>
             <a href="/pages/contact.html" class="nav-btn cursive">Contact</a>
@@ -176,15 +188,15 @@
             </p>
 
             <div class="hero-actions">
-                <a href="publish.html" class="btn-gold">Publish With Us</a>
-                <a href="books.html" class="btn-outline">Our Catalog</a>
+                <a href="/pages/publish.html" class="btn-gold">Publish With Us</a>
+                <a href="/pages/books.html" class="btn-outline">Our Catalog</a>
             </div>
         </section>
 
         <div class="gold-bar"></div>
         <div class="gold-diamond"></div>
 
-        <!-- WHAT BOARDWALK PUBLISHING IS -->
+        <!-- WHAT WE ARE -->
         <section class="section">
             <div class="section-row">
                 <div>
@@ -210,7 +222,7 @@
 
         <div class="gold-bar"></div>
 
-        <!-- WHAT BOARDWALK DOES -->
+        <!-- WHAT WE DO -->
         <section class="section">
             <h2 class="section-title cursive gold-bg">What We Do</h2>
 
@@ -218,32 +230,32 @@
                 <article class="card">
                     <h3 class="card-title cursive gold-bg">Book Publishing</h3>
                     <p>We take your manuscript and turn it into a polished, premium digital book.</p>
-                    <a href="services.html" class="btn-outline">Book Services</a>
+                    <a href="/pages/services.html" class="btn-outline">Book Services</a>
                 </article>
 
                 <article class="card">
                     <h3 class="card-title cursive gold-bg">Comic Production</h3>
                     <p>We help creators turn stories into cinematic comics with full art direction.</p>
-                    <a href="services.html" class="btn-outline">Comic Services</a>
+                    <a href="/pages/services.html" class="btn-outline">Comic Services</a>
                 </article>
 
                 <article class="card">
                     <h3 class="card-title cursive gold-bg">Story Development</h3>
                     <p>We help shape your ideas into structured, compelling stories ready for release.</p>
-                    <a href="services.html" class="btn-outline">Development</a>
+                    <a href="/pages/services.html" class="btn-outline">Development</a>
                 </article>
 
                 <article class="card">
                     <h3 class="card-title cursive gold-bg">Author Services</h3>
                     <p>Branding, display pages, catalog placement, and premium presentation for your work.</p>
-                    <a href="services.html" class="btn-outline">Author Services</a>
+                    <a href="/pages/services.html" class="btn-outline">Author Services</a>
                 </article>
             </div>
         </section>
 
         <div class="gold-bar"></div>
 
-        <!-- HOW IT WORKS PREVIEW -->
+        <!-- HOW IT WORKS -->
         <section class="section">
             <h2 class="section-title cursive gold-bg">How It Works</h2>
             <p class="cursive gold-bg" style="max-width: 720px; margin-top: 12px;">
@@ -256,13 +268,13 @@
                 <span class="pill cursive">Release & Display</span>
             </div>
             <div style="margin-top: 18px;">
-                <a href="how-it-works.html" class="btn-outline">See Full Process</a>
+                <a href="/pages/how-it-works.html" class="btn-outline">See Full Process</a>
             </div>
         </section>
 
         <div class="gold-bar"></div>
 
-        <!-- QUICK NAV TO CORE PAGES -->
+        <!-- QUICK LINKS -->
         <section class="section" style="text-align: center;">
             <h2 class="section-title cursive gold-bg">Explore Boardwalk</h2>
             <p class="cursive gold-bg" style="max-width: 700px; margin: 0 auto 18px;">
@@ -270,11 +282,11 @@
             </p>
 
             <div class="quick-links">
-                <a href="/pages/about.html" class="quick-link-btn cursive">About</a>
-                <a href="/pages/services.html" class="quick-link-btn cursive">Services</a>
-                <a href="/pages/publish.html" class="quick-link-btn cursive">Publish With Us</a>
-                <a href="/pages/pricing.html" class="quick-link-btn cursive">Pricing</a>
-                <a href="/pages/faq.html" class="quick-link-btn cursive">FAQ</a>
+                <a href="/pages/about.html" class="quick-link-btn">About</a>
+                <a href="/pages/services.html" class="quick-link-btn">Services</a>
+                <a href="/pages/publish.html" class="quick-link-btn">Publish</a>
+                <a href="/pages/pricing.html" class="quick-link-btn">Pricing</a>
+                <a href="/pages/faq.html" class="quick-link-btn">FAQ</a>
             </div>
         </section>
 
@@ -287,13 +299,13 @@
                 Whether you're writing your first book or building a comic universe — Boardwalk Publishing
                 helps bring your vision to life.
             </p>
-            <a href="publish.html" class="btn-gold">Start Your Project</a>
+            <a href="/pages/publish.html" class="btn-gold">Start Your Project</a>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
-    <footer class="cursive gold-bg">
+    <!-- FOOTER (NO CURSIVE) -->
+    <footer>
         © Boardwalk Publishing • All Rights Reserved
     </footer>
 
