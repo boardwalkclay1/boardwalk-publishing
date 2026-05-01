@@ -10,10 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
 
     <!-- MANIFEST -->
     <link rel="manifest" href="../manifest.json">
@@ -31,21 +31,27 @@
     <meta name="twitter:image" content="../assets/img/social-preview.png">
 
     <style>
-        /* Override old inline cursive */
+        /* Override inline cursive */
         .cursive {
             font-family: 'Cormorant Garamond', serif !important;
             font-weight: 600;
             letter-spacing: 0.5px;
         }
 
-        /* Remove old gold blocks */
+        /* PAGE BACKGROUND IMAGE */
+        body {
+            background: url('../assets/img/bp-back.jpg') no-repeat center center fixed !important;
+            background-size: cover !important;
+        }
+
+        /* Remove gold blocks */
         .gold-bg {
             background: none !important;
             padding: 0 !important;
             border-radius: 0 !important;
         }
 
-        /* Clean nav (no bubbles) */
+        /* Clean nav */
         nav a {
             background: none !important;
             border: none !important;
@@ -101,7 +107,7 @@
 
 <body>
 
-<!-- FEATHERS -->
+<!-- FEATHERS (optional — remove if you want pure background) -->
 <div class="feather"></div>
 <div class="feather"></div>
 <div class="feather"></div>
