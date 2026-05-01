@@ -38,6 +38,10 @@
             background-size: cover !important;
         }
 
+        header {
+            padding: 28px 0;
+        }
+
         nav a {
             background: none !important;
             border: none !important;
@@ -54,221 +58,284 @@
             color: #fff !important;
         }
 
-        /* FIXED GRID */
-        .book-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
+        .hero {
+            padding-top: 140px;
+            text-align: center;
+            margin-bottom: 40px;
         }
 
-        /* FIXED CARD SPACING */
+        .hero-title {
+            font-size: 4.2rem;
+        }
+
+        .hero-sub {
+            font-size: 1.7rem;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-top: 70px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-label {
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.9rem;
+            color: var(--gold-rich);
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-top: 10px;
+        }
+
+        .book-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 26px;
+        }
+
         .book-card {
+            border-radius: 16px;
+            padding: 22px 22px 24px;
             background: rgba(0,0,0,0.65);
             border: 1px solid var(--gold-soft);
-            border-radius: 16px;
-            padding: 28px;
             box-shadow: inset 0 0 14px rgba(185,151,47,0.16);
         }
 
-        .book-price {
-            font-size: 1.3rem;
-            font-weight: 700;
+        .book-type {
+            font-size: 0.9rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
             color: var(--gold-rich);
+            margin-bottom: 6px;
+        }
+
+        .book-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.1rem;
+            color: var(--gold-rich);
+            margin-bottom: 10px;
+        }
+
+        .book-desc {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .book-meta {
+            font-size: 0.9rem;
+            opacity: 0.85;
             margin-bottom: 16px;
         }
 
-        /* FIXED BUTTON LAYOUT */
         .book-actions {
             display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 14px;
-            margin-top: 18px;
+            gap: 10px;
             flex-wrap: wrap;
+            margin-top: 8px;
         }
 
+        /* BLACK TEXT ON BUTTONS */
         .btn-gold,
         .btn-outline {
             color: #000 !important;
-            padding: 10px 18px;
-            border-radius: 8px;
-            text-align: center;
-            min-width: 110px;
         }
 
-        /* QR DROPDOWN */
-        .qr-toggle {
-            margin-top: 16px;
-            cursor: pointer;
+        .book-price {
+            font-size: 1.2rem;
+            font-weight: 600;
             color: var(--gold-rich);
-            font-size: 1rem;
-            text-decoration: underline;
+            margin-bottom: 12px;
         }
 
-        .qr-box {
-            display: none;
-            margin-top: 14px;
-            padding: 14px;
-            background: rgba(0,0,0,0.55);
-            border-radius: 10px;
+        .contact-note {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .contact-note a {
+            text-decoration: none;
+        }
+
+        /* FIX: give bottom section breathing room + drop the button lower */
+        .section.bottom-section {
+            margin-top: 70px;
+            padding-bottom: 80px;
             text-align: center;
         }
 
-        .qr-box img {
-            width: 160px;
-            height: 160px;
-            border-radius: 8px;
-            border: 1px solid var(--gold-soft);
+        .bottom-section .contact-note {
+            margin-bottom: 24px;
+        }
+
+        .bottom-section .btn-outline {
+            display: inline-block;
+            margin-top: 16px;
         }
     </style>
-
-    <script>
-        function toggleQR(id) {
-            const box = document.getElementById(id);
-            box.style.display = box.style.display === "block" ? "none" : "block";
-        }
-    </script>
 </head>
-
 <body>
 
-<div class="feather"></div><div class="feather"></div><div class="feather"></div><div class="feather"></div><div class="feather"></div>
+<div class="feather"></div>
+<div class="feather"></div>
+<div class="feather"></div>
+<div class="feather"></div>
+<div class="feather"></div>
 
 <div class="wrapper">
 
-<header>
-    <div class="brand">
-        <img src="../assets/img/publish-logo.JPG" alt="Boardwalk Publishing Logo" class="brand-logo-img">
-        <div class="brand-text">
-            <div class="brand-name cursive">Boardwalk Publishing</div>
+    <header>
+        <div class="brand">
+            <img src="../assets/img/publish-logo.JPG" alt="Boardwalk Publishing Logo" class="brand-logo-img">
+            <div class="brand-text">
+                <div class="brand-name cursive">Boardwalk Publishing</div>
+            </div>
         </div>
-    </div>
 
-    <nav>
-        <a href="../index.html" class="cursive">Home</a>
-        <a href="books.html" class="cursive active">Books &amp; Comics</a>
-        <a href="about.html" class="cursive">About</a>
-        <a href="contact.html" class="cursive">Contact</a>
-    </nav>
-</header>
+        <nav>
+            <a href="../index.html" class="cursive">Home</a>
+            <a href="books.html" class="cursive active">Books &amp; Comics</a>
+            <a href="about.html" class="cursive">About</a>
+            <a href="contact.html" class="cursive">Contact</a>
+        </nav>
+    </header>
 
-<main>
+    <main>
+        <section class="hero">
+            <h1 class="hero-title cursive blk">Boardwalk Library</h1>
+            <p class="hero-sub cursive blk">
+                A black‑and‑gold catalog of books and comics built inside the Boardwalk Publishing world.
+            </p>
+        </section>
 
-<section class="hero">
-    <h1 class="hero-title cursive blk">Boardwalk Library</h1>
-    <p class="hero-sub cursive blk">A black‑and‑gold catalog of books and comics built inside the Boardwalk Publishing world.</p>
-</section>
+        <div class="gold-bar"></div>
+        <div class="gold-diamond"></div>
 
-<div class="gold-bar"></div>
-<div class="gold-diamond"></div>
-
-<section class="section">
-    <h2 class="section-title cursive blk">Books &amp; Comics</h2>
-
-    <div class="book-list">
-
-        <!-- GOLD LAKE -->
-        <article class="book-card">
-            <div class="book-type">Comic • Volume 1</div>
-            <h3 class="book-title">Gold Lake</h3>
-
-            <div class="book-price">$5.00</div>
-
-            <p class="book-desc">A full-length comic experience with cinematic pacing and deep atmosphere.</p>
-            <p class="book-meta">Format: Digital PDF • Hosted by Boardwalk Publishing</p>
-
-            <div class="book-actions">
-                <a href="https://www.paypal.com/paypalme/YOURNAME/5" class="btn-gold">Buy Now</a>
-                <a href="#" class="btn-outline">Preview Pages</a>
+        <section class="section">
+            <div class="section-header">
+                <div class="section-label">Catalog</div>
+                <h2 class="section-title cursive blk">Books &amp; Comics</h2>
             </div>
 
-            <div class="qr-toggle" onclick="toggleQR('qr1')">Purchase with QR Code</div>
-            <div class="qr-box" id="qr1">
-                <img src="../assets/img/qr/goldlake.png" alt="Gold Lake QR">
+            <div class="book-list">
+
+                <!-- GOLD LAKE -->
+                <article class="book-card">
+                    <div class="book-type">Comic • Volume 1</div>
+                    <h3 class="book-title">Gold Lake</h3>
+
+                    <div class="book-price">$5.00</div>
+
+                    <p class="book-desc">
+                        A full-length comic experience. High-contrast panels, cinematic pacing, and a
+                        story that pulls you under the surface.
+                    </p>
+                    <p class="book-meta">
+                        Format: Digital PDF • Hosted by Boardwalk Publishing
+                    </p>
+                    <div class="book-actions">
+                        <a href="#" class="btn-gold">Buy Now</a>
+                        <a href="#" class="btn-outline">Preview Pages</a>
+                    </div>
+                </article>
+
+                <!-- NEW CIVIL WAR -->
+                <article class="book-card">
+                    <div class="book-type">Comic</div>
+                    <h3 class="book-title">New Civil War</h3>
+
+                    <div class="book-price">$15.99</div>
+
+                    <p class="book-desc">
+                        A grounded, intense look at a fractured nation and the people caught in the
+                        crossfire of ideology and survival.
+                    </p>
+                    <p class="book-meta">
+                        Format: Digital PDF • Hosted by Boardwalk Publishing
+                    </p>
+                    <div class="book-actions">
+                        <a href="#" class="btn-gold">Buy Now</a>
+                        <a href="#" class="btn-outline">Preview Pages</a>
+                    </div>
+                </article>
+
+                <!-- HIDDEN BREATH -->
+                <article class="book-card">
+                    <div class="book-type">Novel</div>
+                    <h3 class="book-title">Hidden Breath</h3>
+
+                    <div class="book-price">$15.99</div>
+
+                    <p class="book-desc">
+                        A novel about pressure, silence, and the moment you finally decide to choose
+                        yourself over the weight of expectation.
+                    </p>
+                    <p class="book-meta">
+                        Format: Digital eBook (PDF/EPUB) • Hosted by Boardwalk Publishing
+                    </p>
+                    <div class="book-actions">
+                        <a href="#" class="btn-gold">Buy Now</a>
+                        <a href="#" class="btn-outline">Read Sample</a>
+                    </div>
+                </article>
+
+                <!-- HIDDEN BREATH PART 2 -->
+                <article class="book-card">
+                    <div class="book-type">Novel • Part II</div>
+                    <h3 class="book-title">Hidden Breath • Part 2</h3>
+
+                    <div class="book-price">$15.99</div>
+
+                    <p class="book-desc">
+                        The second movement of the story—more raw, more honest, and closer to the
+                        core of what’s been hidden.
+                    </p>
+                    <p class="book-meta">
+                        Format: Digital eBook • Hosted by Boardwalk Publishing
+                    </p>
+                    <div class="book-actions">
+                        <a href="#" class="btn-gold">Buy Now</a>
+                        <a href="#" class="btn-outline">Read Sample</a>
+                    </div>
+                </article>
+
             </div>
-        </article>
+        </section>
 
-        <!-- NEW CIVIL WAR -->
-        <article class="book-card">
-            <div class="book-type">Comic</div>
-            <h3 class="book-title">New Civil War</h3>
+        <div class="gold-bar"></div>
 
-            <div class="book-price">$15.99</div>
-
-            <p class="book-desc">A grounded, intense look at a fractured nation and the people caught in the crossfire.</p>
-            <p class="book-meta">Format: Digital PDF • Hosted by Boardwalk Publishing</p>
-
-            <div class="book-actions">
-                <a href="https://www.paypal.com/paypalme/YOURNAME/15.99" class="btn-gold">Buy Now</a>
-                <a href="#" class="btn-outline">Preview Pages</a>
+        <section class="section bottom-section">
+            <div class="section-header">
+                <div class="section-label">For Authors</div>
+                <h2 class="section-title cursive blk">Display Your Book Here</h2>
             </div>
 
-            <div class="qr-toggle" onclick="toggleQR('qr2')">Purchase with QR Code</div>
-            <div class="qr-box" id="qr2">
-                <img src="../assets/img/qr/newcivilwar.png" alt="New Civil War QR">
-            </div>
-        </article>
+            <p class="contact-note cursive blk">
+                We offer a limited number of black‑and‑gold display slots for authors who want their
+                book or comic featured on this page with a direct paywall link.
+                <br><br>
+                If you’d like your work hosted and showcased here, reach out through the
+                Contact Page below and we’ll send pricing and options.
+            </p>
 
-        <!-- HIDDEN BREATH -->
-        <article class="book-card">
-            <div class="book-type">Novel</div>
-            <h3 class="book-title">Hidden Breath</h3>
+            <a href="contact.html" class="btn-outline" style="color:#000 !important;">Contact Page</a>
+        </section>
+    </main>
 
-            <div class="book-price">$15.99</div>
-
-            <p class="book-desc">A novel about pressure, silence, and choosing yourself over expectation.</p>
-            <p class="book-meta">Format: Digital eBook • Hosted by Boardwalk Publishing</p>
-
-            <div class="book-actions">
-                <a href="https://www.paypal.com/paypalme/YOURNAME/15.99" class="btn-gold">Buy Now</a>
-                <a href="#" class="btn-outline">Read Sample</a>
-            </div>
-
-            <div class="qr-toggle" onclick="toggleQR('qr3')">Purchase with QR Code</div>
-            <div class="qr-box" id="qr3">
-                <img src="../assets/img/qr/hiddenbreath.png" alt="Hidden Breath QR">
-            </div>
-        </article>
-
-        <!-- HIDDEN BREATH PART 2 -->
-        <article class="book-card">
-            <div class="book-type">Novel • Part II</div>
-            <h3 class="book-title">Hidden Breath • Part 2</h3>
-
-            <div class="book-price">$15.99</div>
-
-            <p class="book-desc">The second movement—more raw, more honest, closer to the core.</p>
-            <p class="book-meta">Format: Digital eBook • Hosted by Boardwalk Publishing</p>
-
-            <div class="book-actions">
-                <a href="https://www.paypal.com/paypalme/YOURNAME/15.99" class="btn-gold">Buy Now</a>
-                <a href="#" class="btn-outline">Read Sample</a>
-            </div>
-
-            <div class="qr-toggle" onclick="toggleQR('qr4')">Purchase with QR Code</div>
-            <div class="qr-box" id="qr4">
-                <img src="../assets/img/qr/hiddenbreath2.png" alt="Hidden Breath 2 QR">
-            </div>
-        </article>
-
-    </div>
-</section>
-
-<div class="gold-bar"></div>
-
-<section class="section">
-    <h2 class="section-title cursive blk">Display Your Book Here</h2>
-    <p class="cursive blk" style="max-width:720px;margin:auto;">
-        We offer a limited number of black‑and‑gold display slots for authors who want their book or comic featured here.
-        <br><br>
-        Reach out through the <a href="contact.html" class="btn-outline" style="color:#000 !important;">Contact Page</a> for pricing and options.
-    </p>
-</section>
-
-</main>
-
-<footer class="cursive blk">© Boardwalk Publishing • Books & Comics</footer>
+    <footer>
+        © Boardwalk Publishing • Books &amp; Comics
+    </footer>
 
 </div>
 </body>
