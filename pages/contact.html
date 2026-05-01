@@ -19,36 +19,54 @@
     <link rel="manifest" href="../manifest.json">
 
     <style>
+        /* FIXED LOGO SIZE */
+        .brand-logo-img {
+            width: 62px !important;
+            height: 62px !important;
+            object-fit: contain !important;
+            display: block;
+        }
+
+        /* CURSIVE */
         .cursive {
             font-family:'Cormorant Garamond',serif!important;
             font-weight:600;
             letter-spacing:.5px;
             color:var(--gold-rich)!important;
         }
+
+        /* BLACK BACKGROUND BLOCK */
         .blk {
             background:rgba(0,0,0,.55);
             padding:10px 18px;
             border-radius:10px;
             display:inline-block;
         }
+
+        /* PAGE BACKGROUND */
         body {
             background:url('../assets/img/bp-back.jpg') no-repeat center center fixed!important;
             background-size:cover!important;
         }
+
+        /* NAV */
         nav a {
             background:none!important;
             border:none!important;
             padding:0!important;
             margin-left:22px;
-            font-family:'Cormorant Garamond',serif;
+            font-family:'Cormorant Garamond',serif!important;
             font-size:2rem;
             color:var(--gold-rich)!important;
             transition:.25s;
+            text-decoration:none!important;
         }
         nav a:hover,
         nav a.active {
             color:#fff!important;
         }
+
+        /* FORM */
         form {
             max-width:520px;
             margin:20px auto 0;
@@ -61,27 +79,50 @@
             border:1px solid var(--gold-soft);
             background:rgba(0,0,0,.65);
             color:var(--text);
+            font-size:1.1rem;
         }
         textarea {min-height:150px;}
+
+        /* GOLD BUTTON WITH BLACK TEXT */
         .btn-submit {
             background:var(--gold-rich);
-            color:#000;
+            color:#000 !important;
             padding:12px 28px;
             border-radius:999px;
             border:1px solid var(--gold-deep);
             cursor:pointer;
             font-weight:600;
             letter-spacing:.08em;
+            font-size:1.1rem;
+            display:block;
+            margin:0 auto;
         }
+
+        /* SECTION SPACING */
         .section {
             margin-top:80px;
             text-align:center;
+        }
+
+        /* HERO */
+        .hero {
+            padding-top:140px;
+            text-align:center;
+        }
+        .hero-title {
+            font-size:4rem;
+        }
+        .hero-sub {
+            font-size:1.6rem;
+            max-width:720px;
+            margin:0 auto;
         }
     </style>
 </head>
 
 <body>
 
+<!-- FEATHERS -->
 <div class="feather"></div><div class="feather"></div><div class="feather"></div><div class="feather"></div><div class="feather"></div>
 
 <div class="wrapper">
@@ -136,7 +177,10 @@
 
 <section class="section">
     <h2 class="section-title cursive blk">Direct Contact</h2>
-    <p class="cursive blk">Email us directly at:<br>boardwalkclay1@gmail.com</p>
+    <p class="cursive blk">
+        Email us directly at:<br>
+        boardwalkclay1@gmail.com
+    </p>
 </section>
 
 </main>
