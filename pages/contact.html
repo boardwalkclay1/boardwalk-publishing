@@ -35,7 +35,7 @@
             color:var(--gold-rich)!important;
         }
 
-        /* BLACK BACKGROUND BLOCK */
+        /* BLACK BLOCK */
         .blk {
             background:rgba(0,0,0,.55);
             padding:10px 18px;
@@ -83,10 +83,10 @@
         }
         textarea {min-height:150px;}
 
-        /* GOLD BUTTON WITH BLACK TEXT */
+        /* GOLD BUTTON FIXED */
         .btn-submit {
-            background:var(--gold-rich);
-            color:#000 !important;
+            background:var(--gold-rich)!important;
+            color:#000!important;
             padding:12px 28px;
             border-radius:999px;
             border:1px solid var(--gold-deep);
@@ -96,6 +96,11 @@
             font-size:1.1rem;
             display:block;
             margin:0 auto;
+            transition:.25s;
+        }
+        .btn-submit:hover {
+            background:#d8b85a!important;
+            color:#000!important;
         }
 
         /* SECTION SPACING */
