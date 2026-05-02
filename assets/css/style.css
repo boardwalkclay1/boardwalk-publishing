@@ -5,9 +5,6 @@
     box-sizing: border-box;
 }
 
-/* FONT IMPORT */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
-
 /* ROOT COLORS */
 :root {
     --black: #000;
@@ -18,9 +15,8 @@
     --text: #f2f2f2;
 }
 
-/* GLOBAL FONT + BACKGROUND */
+/* GLOBAL BACKGROUND */
 body {
-    font-family: 'Cormorant Garamond', serif !important;
     color: var(--text);
     background: radial-gradient(circle at top, #0a0a0a 0%, #000 70%, #000 100%);
     overflow-x: hidden;
@@ -28,20 +24,17 @@ body {
     position: relative;
 }
 
-/* CURSIVE CLASS */
+/* CURSIVE CLASS — REMOVED FONT */
 .cursive {
-    font-family: 'Cormorant Garamond', serif !important;
-    font-weight: 600 !important;
     letter-spacing: .5px !important;
 }
 
-/* TITLES */
+/* TITLES — REMOVED FONT */
 h1, h2, h3,
 .hero-title,
 .section-title,
 .card-title,
 .book-title {
-    font-family: 'Cormorant Garamond', serif !important;
     font-weight: 700 !important;
     letter-spacing: .5px !important;
     color: var(--gold-rich) !important;
@@ -81,17 +74,15 @@ header img.logo,
     gap: 14px;
 }
 
-/* BRAND NAME */
+/* BRAND NAME — REMOVED FONT */
 .brand-name {
-    font-family: 'Cormorant Garamond', serif !important;
     font-size: 4rem;
     color: var(--gold-rich);
     text-shadow: 0 0 14px var(--gold-glow);
 }
 
-/* NAV */
+/* NAV — REMOVED FONT */
 nav a {
-    font-family: 'Cormorant Garamond', serif !important;
     font-size: 1.8rem;
     margin-left: 22px;
     transition: .25s;
