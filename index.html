@@ -116,6 +116,35 @@
             background:var(--gold-rich);
             color:#000!important;
         }
+
+        /* FIX BOTTOM BUTTON OVERLAP */
+        .section:last-of-type {
+            padding-bottom: 160px !important;
+        }
+
+        /* FLOATING WRITE NOW BUTTON */
+        .write-now-btn {
+            position: fixed;
+            bottom: 26px;
+            right: 26px;
+            background: var(--gold-rich);
+            color: #000 !important;
+            padding: 16px 32px;
+            border-radius: 999px;
+            border: 1px solid var(--gold-deep);
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: .08em;
+            text-decoration: none;
+            z-index: 9999;
+            transition: .25s;
+            box-shadow: 0 0 18px rgba(185,151,47,0.45);
+        }
+        .write-now-btn:hover {
+            background: #d8b85a;
+            color: #000 !important;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 
@@ -267,6 +296,9 @@
 </footer>
 
 </div>
+
+<!-- FLOATING WRITE NOW BUTTON -->
+<a href="https://boardwalkclay1.github.io/book-studio/" class="write-now-btn">WRITE NOW</a>
 
 </body>
 </html>
