@@ -24,12 +24,14 @@ body {
     position: relative;
 }
 
-/* CURSIVE CLASS — REMOVED FONT */
-.cursive {
-    letter-spacing: .5px !important;
+/* CURSIVE TITLES (Great Vibes applied in HTML) */
+.cursive-title {
+    font-family: 'Great Vibes', cursive !important;
+    letter-spacing: 1.2px !important;
+    color: var(--gold-rich) !important;
 }
 
-/* TITLES — REMOVED FONT */
+/* BASE TITLE STYLE */
 h1, h2, h3,
 .hero-title,
 .section-title,
@@ -74,14 +76,14 @@ header img.logo,
     gap: 14px;
 }
 
-/* BRAND NAME — REMOVED FONT */
+/* BRAND NAME */
 .brand-name {
     font-size: 4rem;
     color: var(--gold-rich);
     text-shadow: 0 0 14px var(--gold-glow);
 }
 
-/* NAV — REMOVED FONT */
+/* NAV */
 nav a {
     font-size: 1.8rem;
     margin-left: 22px;
